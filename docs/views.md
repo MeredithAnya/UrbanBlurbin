@@ -1,8 +1,25 @@
 # View Wireframes
 
-## UrbanBlurbin
-![wireframes]
+## Home Page
+![homepage]
+
+## Logged Out (State Specified)
+![loggedoutstate]
+
+## Logged Out (City Specified)
+![loggedoutcity]
+
+## Logged In 
+![loggedin]
+
+## New Blurb Form
+![newblurb]
 
 
-[wireframes]: ./wireframes/UrbanBlurbinWireframes.png
+
+[homepage]: ./wireframes/HomePage.png
+[loggedoutstate]: ./wireframes/LoggedOutClickedState.png
+[loggedoutcity]: ./wireframes/LoggedOutClickedCity.png
+[loggedin]: ./wireframes/LoggedInClickedState.png
+[newblurb]: ./wireframes/NewBlurbForm.png
 
