@@ -2,13 +2,16 @@
 
 * `App`
   * `NavBar`
+  * `SideBar`
   * `MapIndex`
     * `MapIndexItem`
-    * 'SearchBar'
-  * `BlurbForm`
-  * `BlurbIndex`
-    * `Blurbform`
-    * `BlurbIndexItem`
-  * `NoteDetail`
-    * `NoteTags`
-    * `NoteEditArea`
+    * `SearchBar`
+  * `StateIndex`
+    * `StateIndexItem`
+    * `CitySearchBar
+  * `CityIndex`
+    * `CityIndexItem`
+      *BlurbIndex
+        * `BlurbIndexItem`
+        * `Blurbform`
+ 

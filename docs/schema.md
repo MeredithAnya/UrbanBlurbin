@@ -4,16 +4,24 @@
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-title       | string    | not null
+name        | string    | not null
 state_id    | integer   | not null, foreign key (references states), indexed
 user_id     | integer   | not null, foreign key (references users), indexed
-favorited   | boolean   | not null, default: false
+
+
+## favorites
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null
+city_id     | integer   | not null
+
 
 ## states
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-title       | string    | not null
+name        | string    | not null
 
 ## ratings
 column name | data type | details
@@ -24,7 +32,7 @@ traffic     | float     | not null
 weather     | float     | not null
 nightlife   | float     | not null
 food        | float     | not null
-review      | text      | 
+review      | text      | not null
 
 
 ## tags

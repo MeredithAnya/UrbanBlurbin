@@ -44,12 +44,13 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 - [ ] user signup/signin pages
 - [ ] blank landing page after signin
 
-### Phase 2: Notes Model, API, and basic APIUtil (1.5 days)
+### Phase 2: States Model, API, and basic APIUtil (1.5 days)
 
 **Objective:** Notes can be created, read, edited and destroyed through
 the API.
 
-- [ ] create `Note` model
+- [ ] create `States` model
+- [ ] create `Cities` model
 - [ ] seed the database with a small amount of test data
 - [ ] CRUD API for notes (`NotesController`)
 - [ ] jBuilder views for notes

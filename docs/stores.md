@@ -1,49 +1,26 @@
 # Flux Stores
 
-### NoteStore
+### StateStore
 
-Holds all persisted note data.
-
-##### Actions:
-- `receiveAllNotes`
-- `receiveSingleNote`
-- `removeNote`
-
-##### Listeners:
-- `NotesIndex` (passes to `NoteIndexItem` via props)
-- `NoteDetail`
-
-### NoteFormStore
-
-Holds un-persisted note data to send to the API.
+Holds all persisted state data.
 
 ##### Actions:
-- `receiveNoteFormParams`
+- `receiveAllStates`
+
 
 ##### Listeners:
-- `NoteForm`
+- `StateIndex` (passes to `StateIndexItem` via props)
 
-### NotebookStore
 
-Holds all persisted notebook data.
+### CityStore
+
+Holds all persisted city data.
 
 ##### Actions:
-- `receiveAllNotebooks`
-- `receiveSingleNotebook`
-- `removeNotebook`
+- `receiveAllCities`
 
 ##### Listeners:
-- `NotebookIndex`
-
-### NotebookFormStore
-
-Holds un-persisted notebook data to send to the API.
-
-##### Actions:
-- `receiveNotebookFormParams`
-
-##### Listeners:
-- `NotebookForm`
+- `CityIndex`
 
 ### SearchStore
 
