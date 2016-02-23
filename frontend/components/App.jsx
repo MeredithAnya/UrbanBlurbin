@@ -1,9 +1,13 @@
 var React = require('react');
+var Map = require('./Map');
 
 var App = React.createClass({
 	render: function(){
 		return(
-          <div>In the main app </div>
+          <div> 
+          <h1>UrbanBlurbin</h1>
+          <Map/>
+          </div>
 		);
 	}
 
