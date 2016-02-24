@@ -1,0 +1,198 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  font-family: sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+.login-background {
+	
+  position: relative;
+  margin: 0 auto;
+  width: 950px;
+  height: 1200px;
+  top: 30px;
+  padding: 10px;
+
+}
+.header-text {
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	margin: 0 auto;
+	display: inline-block;
+	right: 150px;
+	color: #4d4e4f;
+	padding: 2px;
+	border-radius: 10px;
+	width: 300px;
+	}
+	
+#content {
+	background-image: url('goldengate.jpeg');
+	background-color: transparent;
+	background-size: 100%;
+	background-position: fixed;
+
+	
+}
+
+ 
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.loginState {
+  display: none;
+}
+
+.header {	
+  position: relative;
+  height: 80px;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #4d4e4f;
+  opacity: 0.80;
+
+
+
+}
+
+.header-logo {
+  position: relative;
+  float: left;
+  top: 5px;
+  left: 20px;
+  padding-top: 0;
+  height: 65px;
+  width: 140px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 2px;
+  background-color: #14c9ff;
+  opacity: 1;
+
+
+
+}
+.header-nav {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.header-list button{
+	position: relative;
+	float: right;
+	top: 20px;
+	padding: 5px;
+	font-size: 19px;
+	right: 50px;
+	height: 25px;
+	width: 100px;
+	border: 2px solid black;
+	color: #14c9ff;
+	text-align: center;
+	background-color: black;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+}
+.header-list a{
+	position: relative;
+	float: right;
+	top: 20px;
+	padding: 5px;
+	margin-left: 5px;
+	font-size: 19px;
+	right: 50px;
+	height: 25px;
+	width: 100px;
+	border: 2px solid black;
+	color: #14c9ff;
+	text-align: center;
+	background-color: black;
+	border-radius: 5px;
+
+}
+.welcome {
+	position: relative;
+	float: right;
+	top: 20px;
+	padding: 5px;
+	font-size: 19px;
+	right: 50px;
+	height: 25px;
+	width: auto;
+	border: 2px solid black;
+	color: #14c9ff;
+	text-align: center;
+	background-color: black;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	text-transform: capitalize;
+
+
+	
+
+}

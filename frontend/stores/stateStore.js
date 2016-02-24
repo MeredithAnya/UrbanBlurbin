@@ -13,18 +13,22 @@ StateStore.findStore = function(id){
   _states.forEach(function(state){
   	if (state.id === id){
   		var found = state;
-  		break;
   	}
   });
     return found;
 
 };
+resetState = function(state){
+  _states = state;
+};
 
 StateStore.__onDispatch = function(payload){
   switch(payload.actionType){
-  	case "":
- 
+  	case "STATE_RECEIVED":
+    resetState(payload.state);
   	StateStore.__emitChange();
   	break;
   }
 };
+
+module.exports = StateStore;
