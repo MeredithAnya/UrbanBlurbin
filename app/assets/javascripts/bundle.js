@@ -19690,9 +19690,9 @@
 			$.fn.maphilight.defaults = {
 				fill: true,
 				fillColor: '98bbec',
-				fillOpacity: 0.4,
+				fillOpacity: 1,
 				stroke: true,
-				strokeColor: 'ffa8f3',
+				strokeColor: '000000',
 				strokeOpacity: 1,
 				strokeWidth: 1,
 				fade: true,
@@ -19708,30 +19708,21 @@
 				shadowOpacity: 0.8,
 				shadowPosition: 'outside',
 				shadowFrom: false
+
 			};
 
 			$('#ImageMap').maphilight();
 		},
 
 		render: function () {
-			var divStyle = {
-				position: 'relative',
-				marginTop: '0',
-				marginRight: 'auto',
-				marginLeft: 'auto',
-				marginBottom: 'auto',
-				width: '930px',
-				height: '1200px',
-				padding: '40px'
 
-			};
 			return React.createElement(
 				'div',
 				null,
 				React.createElement('h1', { style: { textAlign: 'center' } }),
 				React.createElement(
 					'div',
-					{ style: divStyle },
+					{ className: 'login-background' },
 					React.createElement('img', { id: 'ImageMap', src: './assets/usmap.svg', useMap: "#ImageMapAreas" })
 				),
 				React.createElement(
@@ -19860,7 +19851,18 @@
 					{ href: '/session/new' },
 					'Sign In'
 				);
+				var signup = React.createElement(
+					'a',
+					{ href: '/user/new' },
+					'Sign Up'
+				);
 			} else {
+				var welcome = React.createElement(
+					'li',
+					{ className: 'welcome' },
+					'Welcome,  ',
+					window.current_user
+				);
 				signing = React.createElement(
 					'button',
 					{ onClick: this.signOut },
@@ -19878,7 +19880,13 @@
 					React.createElement(
 						'ul',
 						{ className: 'group header-list' },
-						signing
+						React.createElement(
+							'li',
+							null,
+							signing
+						),
+						signup,
+						welcome
 					)
 				)
 			);

@@ -22,8 +22,11 @@ var NavBar = React.createClass({
 		var signing ;
 		if (window.current_user === undefined){
           signing = <a href="/session/new">Sign In</a>;
+          var signup = <a href="/user/new">Sign Up</a>;
+          
                     
 		} else {
+			var welcome = <li className="welcome" >Welcome,  {window.current_user}</li>;
 			signing = <button onClick={this.signOut}> Sign Out </button>;
 		}
 	   
@@ -33,7 +36,9 @@ var NavBar = React.createClass({
 	          <nav className="group header-nav">
 	           <img className="group header-logo" src="./assets/UrbanBlurbin-logo.png"/>
 		           <ul className="group header-list">
-		           {signing}
+		           <li>{signing}</li>
+		           {signup}
+		           {welcome}
 		           </ul>
 	          </nav>
 	        </header>  
