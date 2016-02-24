@@ -29,6 +29,7 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+  font-family: sans-serif;
 }
 ul {
   list-style: none;
@@ -36,18 +37,35 @@ ul {
 
 .login-background {
 	
-		  position: relative;
-		  margin: 0 auto;
-		  width: 950px;
-		  height: 1200px;
-		  padding: 40px;
-		  
-
+  position: relative;
+  margin: 0 auto;
+  width: 950px;
+  height: 1200px;
+  top: 30px;
+  padding: 10px;
 
 }
+.header-text {
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	margin: 0 auto;
+	display: inline-block;
+	right: 150px;
+	color: #4d4e4f;
+	padding: 2px;
+	border-radius: 10px;
+	width: 300px;
+	}
+	
 #content {
-	background: url('goldengate.jpeg') no-repeat;
-	background-size: cover;
+	background-image: url('goldengate.jpeg');
+	background-color: transparent;
+	background-size: 100%;
+	background-position: fixed;
+
+	
 }
 
  
@@ -77,21 +95,6 @@ input[type="submit"] {
   content: "";
   display: block;
   clear: both;
-}
-
-#text776 {
-	font-size: 13.08702374px;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:bold;
-	font-stretch:normal;
-	text-align:start;
-	line-height:100%;
-	writing-mode:lr-tb;
-	text-anchor:start;
-	font-family: Nimbus Sans L,'Arial Narrow',sans-serif;
-	Sans L',sans-serif;
-	-inkscape-font-specification:Nimbus Sans L Bold
 }
 
 
@@ -134,6 +137,8 @@ input[type="submit"] {
   height: 100%;
   width: 100%;
 }
+
+
 
 .header-list button{
 	position: relative;

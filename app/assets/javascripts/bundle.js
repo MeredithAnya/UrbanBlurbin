@@ -19719,10 +19719,14 @@
 			return React.createElement(
 				'div',
 				null,
-				React.createElement('h1', { style: { textAlign: 'center' } }),
 				React.createElement(
 					'div',
 					{ className: 'login-background' },
+					React.createElement(
+						'h3',
+						{ className: 'header-text' },
+						'Select a state to start browsing blurbs'
+					),
 					React.createElement('img', { id: 'ImageMap', src: './assets/usmap.svg', useMap: "#ImageMapAreas" })
 				),
 				React.createElement(

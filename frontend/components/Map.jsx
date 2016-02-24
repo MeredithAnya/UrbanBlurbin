@@ -30,18 +30,15 @@ var Map = React.createClass({
 
 		$('#ImageMap').maphilight();
 
-
-
-
 	},
 
 	render: function(){
 		
 		return (
 			<div >
-			  	<h1 style={{textAlign:'center'}}></h1>
 
 <div className="login-background">
+    <h3 className="header-text">Select a state to start browsing blurbs</h3>
     <img id="ImageMap" src="./assets/usmap.svg" useMap={"#ImageMapAreas"} />
 </div>
 
