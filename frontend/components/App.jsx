@@ -1,11 +1,12 @@
 var React = require('react');
 var Map = require('./Map');
+var NavBar = require('./NavBar');
 
 var App = React.createClass({
 	render: function(){
 		return(
           <div> 
-          <h1>UrbanBlurbin</h1>
+          <NavBar/>
           <Map/>
           </div>
 		);

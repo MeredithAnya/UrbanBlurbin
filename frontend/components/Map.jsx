@@ -31,15 +31,28 @@ var Map = React.createClass({
 
 
 
+
 	},
 
 	render: function(){
-		return (
-			<div>
-			  	<h1>United States</h1>
+		var divStyle = {
+		  position: 'relative',
+		  marginTop: '0',
+		  marginRight: 'auto',
+		  marginLeft: 'auto',
+		  marginBottom: 'auto',
+		  width: '930px',
+		  height: '1200px',
+		  padding: '40px'
 
-<div >
-    <img id="ImageMap" src="./assets/usmap.svg" useMap={"#ImageMapAreas"}/>
+
+		};
+		return (
+			<div >
+			  	<h1 style={{textAlign:'center'}}></h1>
+
+<div style={divStyle}>
+    <img id="ImageMap" src="./assets/usmap.svg" useMap={"#ImageMapAreas"} />
 </div>
 
 

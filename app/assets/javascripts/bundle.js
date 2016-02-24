@@ -19659,6 +19659,7 @@
 
 	var React = __webpack_require__(1);
 	var Map = __webpack_require__(160);
+	var NavBar = __webpack_require__(161);
 
 	var App = React.createClass({
 	  displayName: 'App',
@@ -19667,11 +19668,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        'h1',
-	        null,
-	        'UrbanBlurbin'
-	      ),
+	      React.createElement(NavBar, null),
 	      React.createElement(Map, null)
 	    );
 	  }
@@ -19717,17 +19714,24 @@
 		},
 
 		render: function () {
+			var divStyle = {
+				position: 'relative',
+				marginTop: '0',
+				marginRight: 'auto',
+				marginLeft: 'auto',
+				marginBottom: 'auto',
+				width: '930px',
+				height: '1200px',
+				padding: '40px'
+
+			};
 			return React.createElement(
 				'div',
 				null,
-				React.createElement(
-					'h1',
-					null,
-					'United States'
-				),
+				React.createElement('h1', { style: { textAlign: 'center' } }),
 				React.createElement(
 					'div',
-					null,
+					{ style: divStyle },
 					React.createElement('img', { id: 'ImageMap', src: './assets/usmap.svg', useMap: "#ImageMapAreas" })
 				),
 				React.createElement(
@@ -19823,6 +19827,66 @@
 	});
 
 	module.exports = Map;
+
+/***/ },
+/* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+
+	var NavBar = React.createClass({
+		displayName: 'NavBar',
+
+		getInitialState: function () {
+			return { loggedIn: " " };
+		},
+		signOut: function () {
+			$.ajax({
+				url: '/session',
+				method: 'DELETE',
+				success: function () {
+					window.location = "/";
+				}
+
+			});
+		},
+
+		render: function () {
+
+			var signing;
+			if (window.current_user === undefined) {
+				signing = React.createElement(
+					'a',
+					{ href: '/session/new' },
+					'Sign In'
+				);
+			} else {
+				signing = React.createElement(
+					'button',
+					{ onClick: this.signOut },
+					' Sign Out '
+				);
+			}
+
+			return React.createElement(
+				'header',
+				{ className: 'header' },
+				React.createElement(
+					'nav',
+					{ className: 'group header-nav' },
+					React.createElement('img', { className: 'group header-logo', src: './assets/UrbanBlurbin-logo.png' }),
+					React.createElement(
+						'ul',
+						{ className: 'group header-list' },
+						signing
+					)
+				)
+			);
+		}
+
+	});
+
+	module.exports = NavBar;
 
 /***/ }
 /******/ ]);

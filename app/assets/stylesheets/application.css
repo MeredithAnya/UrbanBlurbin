@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+ html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+ul {
+  list-style: none;
+}
+
+#content {
+	background-color: #89a3fb;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.loginState {
+  display: none;
+}
+
+.header {	
+  position: relative;
+  height: 70px;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #4d4e4f;
+
+
+
+}
+
+.header-logo {
+  position: relative;
+  float: left;
+  top: 20px;
+  left: 20px;
+  padding: 5px;
+  padding-top: 0;
+  height: 70px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 3px;
+  background-color: #b2cf36 ;
+
+
+
+}
+.header-nav {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+
+.header-list {
+	position: relative;
+	float: right;
+	padding: 5px;
+	font-size: 20px;
+	right: 50px;
+}
