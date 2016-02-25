@@ -44,9 +44,9 @@ li {
   position: relative;
   margin: 0 auto;
   width: 950px;
-  height: 1200px;
-  top: 30px;
-  padding: 10px;
+  height: 740px ;
+  top: 90px;
+  padding: 0px;
 
 }
 .header-text {
@@ -63,12 +63,11 @@ li {
 	width: 300px;
 	}
 	
-#content {
+html {
 	background-image: url('goldengate.jpeg');
 	background-color: transparent;
 	background-size: 100%;
 	background-position: fixed;
-
 	
 }
 
@@ -107,7 +106,7 @@ input[type="submit"] {
 }
 
 .header {	
-  position: relative;
+  position: fixed;
   height: 80px;
   border-radius: 4px;
   width: 100%;
@@ -201,20 +200,33 @@ input[type="submit"] {
 
 
 .usa-state {
+  float: left;
   position: relative;
   margin: 0 auto;
-  width: 950px;
-  height: 1200px;
-  top: 30px;
-  padding: 10px;
+  width: 50%;
+  height: 100%;
+  top: 50px;
+  padding: 20px;
+  border: 5px solid red;
 }
 
 .usa-state-item {
+    float: left;
+	display: block;
 	position: relative;
 	font-size: 40px;
 	margin: 0 auto;
 	text-align: center;
+	border: 5px solid red;
 }
+.state-cities {	
+	float: right;
+	font-size: 20px;
+	margin: 0 auto;
+	text-align: center;
+	border: 5px solid red;
+}
+
 
 
 

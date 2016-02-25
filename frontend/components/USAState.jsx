@@ -17,11 +17,19 @@ var USAState = React.createClass({
 	},
 
 	render: function(){
-
+		
+		if (this.state.usaState.length != 0){
+			
+			var cities = this.state.usaState.cities.map(function(city, index){
+	          return <li className='group state-cities' key={index}>{city.name}</li>;
+			});	
+		}
+      
 		return (
            <div>
 	           <div className="usa-state">
-	              <li className="usa-state-item">This is {this.state.usaState.name}</li>
+	              <li className="group usa-state-item">This is {this.state.usaState.name}</li>
+	              {cities}
 	           </div>
            </div>
 		);

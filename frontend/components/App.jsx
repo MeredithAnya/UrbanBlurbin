@@ -6,7 +6,7 @@ var NavBar = require('./NavBar');
 var App = React.createClass({
 	render: function(){
 		return(
-          <div> 
+          <div className="app"> 
            <NavBar/>
            {this.props.children}
           </div>

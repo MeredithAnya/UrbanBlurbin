@@ -19,6 +19,7 @@ var routes = (
   <Route path="/" component={App}>
   <IndexRoute component={Map}/>
   <Route path="state/:stateId"component={USAState}>
+   
   </Route>
   </Route>
 );

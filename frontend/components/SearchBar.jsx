@@ -8,6 +8,8 @@ var SearchBar = React.createClass({
      this.setState({searchedCity: this.searchedCity.name});
 	},
 	handleSearch: function(){
+		//get city object from city Store
+		//redirect to page /state/ city.state_id/ city_id
 		debugger;
 	},
 
