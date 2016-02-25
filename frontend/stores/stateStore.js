@@ -6,13 +6,14 @@ var _states = [];
 var StateStore = new Store(AppDispatcher);
 
 StateStore.all = function(){
-	return _states.slice(0);
+	return _states;
 };
 
-StateStore.findStore = function(id){
+StateStore.findState = function(id){
+  var found;
   _states.forEach(function(state){
   	if (state.id === id){
-  		var found = state;
+  		found = state;
   	}
   });
     return found;
