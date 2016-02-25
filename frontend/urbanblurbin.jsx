@@ -8,6 +8,7 @@ var hashHistory = require('react-router').hashHistory;
 var App = require('./components/App');
 var USAState = require('./components/USAState');
 var Map = require('./components/Map');
+var SearchBar = require('./components/SearchBar');
 
 
 var ApiUtil = require('./util/apiUtil');

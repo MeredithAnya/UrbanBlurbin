@@ -4,7 +4,7 @@ var STATE_IDS ={
 	AZ: 3,
 	AR: 4,
 	CA: 5,
-	CO: 6,
+	CO: 6, 
 	CT: 7,
 	DE: 8,
 	FL: 9,
