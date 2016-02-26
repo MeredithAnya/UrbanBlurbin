@@ -8,7 +8,7 @@ var ApiUtil = {
       type: 'GET',
       dataType: 'json',
       success:(function(state){
-        console.log(state);
+        
       	StateActions.receiveState(state);
       })
   	});

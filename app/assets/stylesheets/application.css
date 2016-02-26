@@ -200,12 +200,12 @@ input[type="submit"] {
 
 
 .usa-state {
-  float: left;
+  
   position: relative;
   margin: 0 auto;
   width: 50%;
   height: 100%;
-  top: 50px;
+  top: 100px;
   padding: 20px;
   border: 5px solid red;
 }
@@ -227,6 +227,34 @@ input[type="submit"] {
 	border: 5px solid red;
 }
 
+.sidebar-header {
+  float: left;
+  position: fixed;
+  margin: 0 auto;
+  width: 90px;
+  height: 100%;
+  top: 80px;
+  border: 5px solid orange;
+
+}
+.sidebar-nav {
+	 float: left;
+  position: relative;
+  margin: 0 auto;
+  width: 70px;
+  height: 50%;
+  top: 80px;
+  border: 5px solid orange;
+}
+.sidebar a{
+		 float: left;
+  position: relative;
+  margin: 0 auto;
+  width: 70px;
+  height: 100%;
+  top: 80px;
+  border: 5px solid orange;
+}
 
 
 

@@ -1,5 +1,5 @@
 var React = require('react');
-var NavBar = require('./NavBar');
+var SideBar =require('./SideBar');
 
 var USAState = React.createClass({
 
@@ -15,6 +15,9 @@ var USAState = React.createClass({
 	
      this.setState({usaState: StateStore.all()});
 	},
+	componentWillUnmount: function(){
+		this.stateToken.remove();
+	},
 
 	render: function(){
 		
@@ -27,7 +30,8 @@ var USAState = React.createClass({
       
 		return (
            <div>
-	           <div className="usa-state">
+             <SideBar/>
+	           <div className="group usa-state">
 	              <li className="group usa-state-item">This is {this.state.usaState.name}</li>
 	              {cities}
 	           </div>

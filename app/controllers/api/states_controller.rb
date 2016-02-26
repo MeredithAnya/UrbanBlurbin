@@ -2,6 +2,8 @@ class Api::StatesController < ApplicationController
 
 	def show
 		@state = State.find(params[:id])
+	
+
 		render :show
 	end
 

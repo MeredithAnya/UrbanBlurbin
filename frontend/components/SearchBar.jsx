@@ -17,12 +17,9 @@ var SearchBar = React.createClass({
     	
 	var input = document.getElementById('pac-input');
 	var searchBox = new google.maps.places.SearchBox(input);
-	var options = {
-	  types: ['(cities)'],
-	  componentRestrictions: {country: "us"}
-	 };
+	
 	var that = this;
-	var autocomplete = new google.maps.places.Autocomplete(input, options);
+	var autocomplete = new google.maps.places.Autocomplete(input, this.props.options);
     this.placeToken = autocomplete.addListener('place_changed', function(){
     	that.searchedCity = autocomplete.getPlace();
     	that.placeChanged();
