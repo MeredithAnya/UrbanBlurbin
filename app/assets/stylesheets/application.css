@@ -195,6 +195,14 @@ input[type="submit"] {
 	text-transform: capitalize;
 	
 
+}.usa-city{
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  top: 100px;
+  padding: 20px;
+  border: 5px solid red;
 }
 
 

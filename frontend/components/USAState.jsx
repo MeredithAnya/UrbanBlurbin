@@ -1,5 +1,6 @@
 var React = require('react');
 var SideBar =require('./SideBar');
+var SearchBar =require('./SearchBar');
 
 var USAState = React.createClass({
 
@@ -27,6 +28,11 @@ var USAState = React.createClass({
 	          return <li className='group state-cities' key={index}>{city.name}</li>;
 			});	
 		}
+		var options = {
+		  types: ['(cities)'],
+		  componentRestrictions: {country: "US"}
+		 };
+		 debugger;
       
 		return (
            <div>
@@ -34,7 +40,9 @@ var USAState = React.createClass({
 	           <div className="group usa-state">
 	              <li className="group usa-state-item">This is {this.state.usaState.name}</li>
 	              {cities}
+	              <SearchBar options={options}/>
 	           </div>
+	              {this.props.children}
            </div>
 		);
 	}

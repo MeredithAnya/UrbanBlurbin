@@ -40,7 +40,7 @@ var Map = React.createClass({
 	clicked: function(e){
 	  e.preventDefault();	
 		var id = STATE_IDS[e.target.title];
-		this.context.router.replace({pathname:'/state/'+ id, query:{stateId: id}});
+		this.context.router.replace({pathname:'/states/'+ id, query:{stateId: id}});
      
 	},
 

@@ -56,6 +56,7 @@
 	var USAState = __webpack_require__(221);
 	var Map = __webpack_require__(217);
 	var SearchBar = __webpack_require__(219);
+	var City = __webpack_require__(245);
 	
 	var ApiUtil = __webpack_require__(223);
 	var StateStore = __webpack_require__(229);
@@ -64,7 +65,11 @@
 	  Route,
 	  { path: '/', component: App },
 	  React.createElement(IndexRoute, { component: Map }),
-	  React.createElement(Route, { path: 'state/:stateId', component: USAState })
+	  React.createElement(
+	    Route,
+	    { path: 'states/:stateId', component: USAState },
+	    React.createElement(Route, { path: 'cities/:cityId', component: City })
+	  )
 	);
 	
 	document.addEventListener("DOMContentLoaded", function () {
@@ -24772,7 +24777,7 @@
 		clicked: function (e) {
 			e.preventDefault();
 			var id = STATE_IDS[e.target.title];
-			this.context.router.replace({ pathname: '/state/' + id, query: { stateId: id } });
+			this.context.router.replace({ pathname: '/states/' + id, query: { stateId: id } });
 		},
 	
 		render: function () {
@@ -25081,6 +25086,7 @@
 
 	var React = __webpack_require__(1);
 	var SideBar = __webpack_require__(222);
+	var SearchBar = __webpack_require__(219);
 	
 	var USAState = React.createClass({
 		displayName: 'USAState',
@@ -25114,6 +25120,11 @@
 					);
 				});
 			}
+			var options = {
+				types: ['(cities)'],
+				componentRestrictions: { country: "US" }
+			};
+			debugger;
 	
 			return React.createElement(
 				'div',
@@ -25128,8 +25139,10 @@
 						'This is ',
 						this.state.usaState.name
 					),
-					cities
-				)
+					cities,
+					React.createElement(SearchBar, { options: options })
+				),
+				this.props.children
 			);
 		}
 	
@@ -31924,6 +31937,31 @@
 	
 	module.exports = FluxMixinLegacy;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var City = React.createClass({
+		displayName: "City",
+	
+		render: function () {
+			return React.createElement(
+				"div",
+				{ className: "group usa-city" },
+				React.createElement(
+					"li",
+					null,
+					"This is the City Component"
+				)
+			);
+		}
+	
+	});
+	
+	module.exports = City;
 
 /***/ }
 /******/ ]);

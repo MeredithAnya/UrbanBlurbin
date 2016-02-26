@@ -10,6 +10,7 @@ var App = require('./components/App');
 var USAState = require('./components/USAState');
 var Map = require('./components/Map');
 var SearchBar = require('./components/SearchBar');
+var City = require('./components/City');
 
 
 var ApiUtil = require('./util/apiUtil');
@@ -19,8 +20,8 @@ var StateStore = require('./stores/stateStore');
 var routes = (
   <Route path="/" component={App}>
   <IndexRoute component={Map}/>
-  <Route path="state/:stateId"component={USAState}>
-
+  <Route path="states/:stateId"component={USAState}>
+    <Route path="cities/:cityId"component={City}/>
   </Route>
   </Route>
 );

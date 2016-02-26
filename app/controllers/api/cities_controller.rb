@@ -1,7 +1,7 @@
-class Api::StatesController < ApplicationController
+class Api::CitiesController < ApplicationController
 
 	def show
-		@state = City.find(params[:id])
+		@city = City.find(params[:id])
 		render :show
 	end
 
