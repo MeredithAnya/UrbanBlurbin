@@ -5,8 +5,15 @@ class Api::CitiesController < ApplicationController
 		render :show
 	end
 
+	def city
+		@city = City.getCity(
+			params[:cityName],
+			params[:stateId])
+		render :city
+	end
+
 	private
 	def city_params
-		params.require(:city).permit(:name)
+		params.require(:city).permit(:name,:stateId,:cityName)
 	end
 end

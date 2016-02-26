@@ -32,7 +32,7 @@ var USAState = React.createClass({
 		  types: ['(cities)'],
 		  componentRestrictions: {country: "US"}
 		 };
-		 debugger;
+		 
       
 		return (
            <div>
@@ -42,7 +42,9 @@ var USAState = React.createClass({
 	              {cities}
 	              <SearchBar options={options}/>
 	           </div>
-	              {this.props.children}
+	             <div className='city-detail'>
+	               {this.props.children}
+	             </div> 
            </div>
 		);
 	}

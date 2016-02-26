@@ -195,7 +195,8 @@ input[type="submit"] {
 	text-transform: capitalize;
 	
 
-}.usa-city{
+}
+.city-detail{
   position: relative;
   margin: 0 auto;
   width: 50%;

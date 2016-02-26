@@ -1,26 +1,16 @@
 var Store = require('flux/utils').Store;
 var AppDispatcher = require('../dispatcher/dispatcher');
 
-var _states = [];
+var _state = [];
 
 var StateStore = new Store(AppDispatcher);
 
 StateStore.all = function(){
-	return _states;
+	return _state;
 };
 
-StateStore.findState = function(id){
-  var found;
-  _states.forEach(function(state){
-  	if (state.id === id){
-  		found = state;
-  	}
-  });
-    return found;
-
-};
 resetState = function(state){
-  _states = state;
+  _state = state;
 };
 
 StateStore.__onDispatch = function(payload){

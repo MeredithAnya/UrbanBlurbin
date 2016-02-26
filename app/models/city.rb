@@ -5,6 +5,11 @@ class City < ActiveRecord::Base
 	primary_key: :id,
 	foreign_key: :state_id,
 	class_name: 'State'
-
+    
+    def self.getCity(name, stateId)
+    	city = City.find_by(name: name, state_id: stateId)
+    	return city if city
+    	nil
+    end
 	
 end

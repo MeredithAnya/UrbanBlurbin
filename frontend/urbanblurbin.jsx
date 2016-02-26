@@ -21,7 +21,8 @@ var routes = (
   <Route path="/" component={App}>
   <IndexRoute component={Map}/>
   <Route path="states/:stateId"component={USAState}>
-    <Route path="cities/:cityId"component={City}/>
+      <Route path="cities/:cityId"component={City}/>
+    <Route/>  
   </Route>
   </Route>
 );
