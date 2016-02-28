@@ -1,6 +1,8 @@
 var React = require('react');
 var SideBar =require('./SideBar');
 var SearchBar =require('./SearchBar');
+var StateStore = require('../stores/stateStore');
+var ApiUtil = require('../util/apiUtil');
 
 var USAState = React.createClass({
 
@@ -8,6 +10,7 @@ var USAState = React.createClass({
 		return {usaState: StateStore.all()};
 	},
 	componentDidMount: function(){
+
 	 var id = parseInt(this.props.location.query.stateId);
 	 this.stateToken = StateStore.addListener(this._onChange);
      ApiUtil.fetchState(id);
@@ -19,6 +22,9 @@ var USAState = React.createClass({
 	componentWillUnmount: function(){
 		this.stateToken.remove();
 	},
+	 contextTypes: {
+     router: React.PropTypes.object.isRequired
+    },
 
 	render: function(){
 		
@@ -29,7 +35,7 @@ var USAState = React.createClass({
 			});	
 		}
 		var options = {
-		  types: ['(cities)'],
+		  types: ["(cities)"],
 		  componentRestrictions: {country: "US"}
 		 };
 		 
@@ -40,7 +46,7 @@ var USAState = React.createClass({
 	           <div className="group usa-state">
 	              <li className="group usa-state-item">This is {this.state.usaState.name}</li>
 	              {cities}
-	              <SearchBar options={options}/>
+	              <SearchBar options={options} router={this.context.router}/>
 	           </div>
 	             <div className='city-detail'>
 	               {this.props.children}

@@ -33,5 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
-window.ApiUtil = ApiUtil;
-window.StateStore = StateStore;
+

@@ -12,6 +12,16 @@ var ApiUtil = {
       	StateActions.receiveState(state);
       })
   	});
+  },
+  fetchCity: function(id){
+    $.ajax({
+      url: 'api/cities/' + id,
+      type: 'GET',
+      dataType: 'json',
+      sucess:(function(city){
+        CityActions.receiveCity(city);
+      })
+    });
   }
 };
 

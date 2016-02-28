@@ -1,5 +1,7 @@
  var React = require('react');
  var STATE_IDS = require('../constants/stateIDs');
+ var CityActions = require('../actions/cityActions');
+ var CityStore = require('../stores/cityStore');
 
 
 var SearchBar = React.createClass({
@@ -8,14 +10,15 @@ var SearchBar = React.createClass({
     },
 
 	placeChanged: function(){
-		
+		debugger;
 	 	
 	 var stateId = STATE_IDS[this.searchedCity.address_components[2].short_name];
 	 var city = this.searchedCity.address_components[0].long_name;	
      this.setState({searchedCity: {city: city,
                                    stateId: stateId }});
 	},
-	handleSearch: function(){
+	handleSearch: function(e){
+		e.preventDefault();
 		var that = this;
 		var cityName = this.state.searchedCity.city;
 		var stateId = this.state.searchedCity.stateId;
@@ -23,11 +26,19 @@ var SearchBar = React.createClass({
            url: "api/city/" + cityName + "/" + stateId,
            method: 'GET',
            success: function(city){
-           	that.props.router.replace("/states/"+city.id);
+           	CityActions.receiveCity(city);
+           	that.stateId = stateId;
+           	that.city = CityStore.find(city.id);
            }
-		 })
-			
-		
+		 });
+		setTimeout(this.redirectToSearch,1000);
+
+	},
+	redirectToSearch: function(){
+	
+	   var city = this.city.id;
+	   var stateId = this.stateId;
+       this.props.router.replace({pathname:'/states/' + stateId + "/cities/" + city, query: {stateId: stateId, cityId: city}});
 	},
 
     componentDidMount: function(){

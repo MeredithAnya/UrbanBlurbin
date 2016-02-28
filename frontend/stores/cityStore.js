@@ -17,13 +17,13 @@ CityStore.find = function(id){
 	return _cities[id];
 };
 
-resetCities = function(cities){
+var resetCities = function(cities){
   _cities = {};	
   cities.forEach(function(city){
   	_cities[city.id] = city;
   });
 };
-resetCity = function(city){
+var resetCity = function(city){
   _cities[city.id] = city;
 };
 
@@ -34,6 +34,7 @@ CityStore.__onDispatch = function(payload){
 	  	CityStore.__emitChange();
 	  	break;
   	case "CITY_RECEIVED":
+      debugger;
 	    resetCity(payload.city);
 	  	CityStore.__emitChange();
 	  	break;

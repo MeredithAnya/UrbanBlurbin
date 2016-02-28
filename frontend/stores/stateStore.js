@@ -9,7 +9,7 @@ StateStore.all = function(){
 	return _state;
 };
 
-resetState = function(state){
+var resetState = function(state){
   _state = state;
 };
 
