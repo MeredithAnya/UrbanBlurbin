@@ -39,8 +39,20 @@ li {
 }
 
 #states-icon {
+  position: relative;
+  top: 8px;
   width: 50px;
-  height: 50px;
+  height: 40px;
+  
+}
+#blurb-icon {
+  position: relative;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+  
+
+
 }
 
 
@@ -228,7 +240,7 @@ input[type="submit"] {
   margin: 0 auto;
   height: 600px;
   top: 100px;
-  background-color: rgba(20, 201, 255, .5);
+
   border-radius: 4px;
 }
 
@@ -262,7 +274,7 @@ input[type="submit"] {
   margin: 0 auto;
   font-size: 20px;
   text-align: center;
-  background-color: #ff6666
+  background-color: rgba(255, 102, 102, .7);
 }
   
 .state-cities {
@@ -281,10 +293,13 @@ input[type="submit"] {
   float: left;
   position: fixed;
   margin: 0 auto;
-  width: 90px;
-  height: 70%;
+  width: 100px;
+  height: 50%;
   top: 130px;
   background-color: #4d4e4f;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  background-color: rgba(77, 78, 79, .8)
 
 }
 .sidebar-nav {
@@ -299,12 +314,18 @@ input[type="submit"] {
  
 }
 .sidebar a{
-  font-size: 20px;
+  right: 5px;
+  font-size: 17px;
 	display: block;
   position: relative;
   height: 100%;
   text-align: center;
   padding: 20px;
+  color: #14c9ff;
+  text-shadow: 2px 2px black;
+  margin-bottom: 6px;
+  margin-top: 10px;
+
 
   
   
