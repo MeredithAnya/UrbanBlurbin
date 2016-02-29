@@ -224,6 +224,14 @@ input[type="submit"] {
   background-color: rgba(242, 242, 242, .7);
 }
 
+.city-detail h1 {
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  
+}
+
 .usa-city {
   position: relative;
   
