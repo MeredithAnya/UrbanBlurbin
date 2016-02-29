@@ -38,6 +38,11 @@ li {
 	list-style: none;
 }
 
+#states-icon {
+  width: 50px;
+  height: 50px;
+}
+
 
 .login-background {
 	
@@ -198,12 +203,19 @@ input[type="submit"] {
 }
 .city-detail{
   position: relative;
-  margin: 0 auto;
-  width: 50%;
-  height: 100%;
-  top: 100px;
+  float: right;
+  width: 400px;
+  height: 500px;
+  margin: 20px;
   padding: 20px;
-  border: 5px solid red;
+  
+  background-color: rgba(242, 242, 242, .7);
+}
+
+.usa-city {
+  position: relative;
+  
+  text-align: center;
 }
 
 
@@ -211,29 +223,58 @@ input[type="submit"] {
 .usa-state {
   
   position: relative;
+  display: block;
+  width: 70%;
   margin: 0 auto;
-  width: 50%;
-  height: 100%;
+  height: 600px;
   top: 100px;
-  padding: 20px;
-  border: 5px solid red;
+  background-color: rgba(20, 201, 255, .5);
+  border-radius: 4px;
 }
 
 .usa-state-item {
-    float: left;
-	display: block;
+  float: left;
+	display: inline-block;
 	position: relative;
+  width: 300px;
+  height: 500px;
 	font-size: 40px;
-	margin: 0 auto;
+	margin: 20px;
+  padding: 20px;
 	text-align: center;
-	border: 5px solid red;
+	background-color: rgba(242, 242, 242, .7);
 }
-.state-cities {	
-	float: right;
-	font-size: 20px;
-	margin: 0 auto;
-	text-align: center;
-	border: 5px solid red;
+.state-name {
+  font-size: 40px;
+  color: white;
+  border: 3px solid black;
+  background-color: #4d4e4f; 
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+}
+.state-cities li{ 
+
+  position: relative;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  background-color: #ff6666
+}
+  
+.state-cities {
+   font-size: 20px
+   top: 25px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   float: left;
+   width: 100%;
+   display: block;
+   
+   padding-top: 10px;
 }
 
 .sidebar-header {
@@ -241,28 +282,32 @@ input[type="submit"] {
   position: fixed;
   margin: 0 auto;
   width: 90px;
-  height: 100%;
-  top: 80px;
-  border: 5px solid orange;
+  height: 70%;
+  top: 130px;
+  background-color: #4d4e4f;
 
 }
 .sidebar-nav {
-	 float: left;
+	
   position: relative;
   margin: 0 auto;
-  width: 70px;
-  height: 50%;
-  top: 80px;
-  border: 5px solid orange;
+  
+  width: 100%;
+  height: 100%;
+  
+  
+ 
 }
 .sidebar a{
-		 float: left;
+  font-size: 20px;
+	display: block;
   position: relative;
-  margin: 0 auto;
-  width: 70px;
   height: 100%;
-  top: 80px;
-  border: 5px solid orange;
+  text-align: center;
+  padding: 20px;
+
+  
+  
 }
 
 

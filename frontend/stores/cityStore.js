@@ -34,7 +34,7 @@ CityStore.__onDispatch = function(payload){
 	  	CityStore.__emitChange();
 	  	break;
   	case "CITY_RECEIVED":
-      debugger;
+      
 	    resetCity(payload.city);
 	  	CityStore.__emitChange();
 	  	break;

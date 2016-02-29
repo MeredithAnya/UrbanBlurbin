@@ -11,6 +11,7 @@ var USAState = require('./components/USAState');
 var Map = require('./components/Map');
 var SearchBar = require('./components/SearchBar');
 var City = require('./components/City');
+var CityStore = require('./stores/cityStore');
 
 
 var ApiUtil = require('./util/apiUtil');
@@ -33,4 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
+window.CityStore = CityStore;
+window.ApiUtil = ApiUtil;
 

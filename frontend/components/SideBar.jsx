@@ -7,7 +7,7 @@ var SideBar = React.createClass({
    		<header className="group sidebar-header">
    		<nav className="group sidebar-nav">
           <ul className='group sidebar'>
-           <Link to='/'>States</Link>
+           <Link to='/'>States<img id="states-icon" src="./assets/states-icon.png"></img></Link>
            <Link to='/'>Cities</Link>
            <Link to='/'>Write A Blurb</Link>
           </ul>

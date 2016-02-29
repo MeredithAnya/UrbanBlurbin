@@ -1,4 +1,5 @@
 var StateActions = require('../actions/stateActions');
+var CityActions = require('../actions/cityActions');
 
 var ApiUtil = {
   fetchState: function(id){
@@ -14,11 +15,13 @@ var ApiUtil = {
   	});
   },
   fetchCity: function(id){
+    
     $.ajax({
       url: 'api/cities/' + id,
       type: 'GET',
       dataType: 'json',
-      sucess:(function(city){
+      success:(function(city){
+        
         CityActions.receiveCity(city);
       })
     });

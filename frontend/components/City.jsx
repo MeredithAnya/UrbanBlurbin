@@ -7,22 +7,24 @@ var City = React.createClass({
 		return {city: {}};
 	},
 	componentDidMount: function(){
-     
      var id = parseInt(this.props.location.query.cityId);
-	 this.stateToken = CityStore.addListener(this._onChange);
+	 this.cityToken = CityStore.addListener(this._onChange);
      ApiUtil.fetchCity(id);
 	},
 	_onChange: function(){
-	  debugger;
+	 
      this.setState({city: CityStore.find()});
 	},
 	componentWillReceiveProps: function(newProps){
-     debugger;
+     
+	},
+	componentWillUnmount: function(){
+      this.cityToken.remove();
 	},
 	render: function(){
 		return (
 			<div className="group usa-city">
-			  <li>This is the City Component</li>
+			  <li>This is {this.state.city.name}</li>
 			</div>
 		 );
 	}

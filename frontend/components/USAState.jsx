@@ -44,13 +44,21 @@ var USAState = React.createClass({
            <div>
              <SideBar/>
 	           <div className="group usa-state">
-	              <li className="group usa-state-item">This is {this.state.usaState.name}</li>
-	              {cities}
-	              <SearchBar options={options} router={this.context.router}/>
-	           </div>
-	             <div className='city-detail'>
+	              <section className="group usa-state-item">
+	              <ul className="group state-cities">
+	              <h1 className="state-name">{this.state.usaState.name}</h1>
+	              <li className="top-cities-header">Top cities:</li>
+	              <li >Top City One</li>
+	              <li >Top City Two</li>
+	              <li >Top City Three</li>
+	              </ul>
+	              </section>
+	              
+	             <div className='group city-detail'>
 	               {this.props.children}
+	              <SearchBar options={options} router={this.context.router}/>
 	             </div> 
+	           </div>
            </div>
 		);
 	}
