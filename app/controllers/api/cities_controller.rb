@@ -2,6 +2,7 @@ class Api::CitiesController < ApplicationController
 
 	def show
 		@city = City.find(params[:id])
+		@averages = @city.averages
 		render :show
 	end
 

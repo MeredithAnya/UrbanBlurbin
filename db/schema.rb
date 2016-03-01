@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224195127) do
+ActiveRecord::Schema.define(version: 20160229220803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blurbs", force: :cascade do |t|
+    t.integer  "city_id",    null: false
+    t.integer  "traffic",    null: false
+    t.integer  "weather",    null: false
+    t.integer  "food",       null: false
+    t.integer  "nightlife",  null: false
+    t.text     "blurb",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "blurbs", ["city_id"], name: "index_blurbs_on_city_id", using: :btree
 
   create_table "cities", force: :cascade do |t|
     t.integer  "state_id",   null: false

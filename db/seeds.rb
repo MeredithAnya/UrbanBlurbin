@@ -161,6 +161,11 @@ City.create!(name: 'West Los Angeles' ,state_id: 5)
 City.create!(name: 'Westwood' ,state_id: 5)
 City.create!(name: 'Yountville' ,state_id: 5)
 
+#CALIFORNIA BLURBS
+#OAKLAND BLURBS
+Blurb.create!(city_id: 52, traffic: 3, weather: 5, food: 5, nightlife: 4, blurb: "Oakland is poppin'")
+Blurb.create!(city_id: 52, traffic: 2, weather: 5, food: 5, nightlife: 5, blurb: "There are some bomb places to eat around here")
+
 #COLORADO CITIES 
 City.create!(name: "Boulder", state_id: 6)
 City.create!(name: "Denver", state_id: 6)

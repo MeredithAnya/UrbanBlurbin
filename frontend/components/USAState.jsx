@@ -55,8 +55,8 @@ var USAState = React.createClass({
 	              </section>
 	              
 	             <div className='group city-detail'>
-	             <h1>Search for a specific city to see their blurbs</h1>
 	               {this.props.children}
+	             <h1>Search for a specific city to see their blurbs</h1>
 	              <SearchBar options={options} router={this.context.router}/>
 	             </div> 
 	           </div>
