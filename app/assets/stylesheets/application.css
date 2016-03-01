@@ -357,7 +357,7 @@ input[type=range]::-ms-fill-lower {
 }
   
 .state-cities {
-   font-size: 20px
+   font-size: 20px;
    top: 25px;
    margin-top: 10px;
    margin-bottom: 10px;
