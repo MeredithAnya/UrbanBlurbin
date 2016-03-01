@@ -3,14 +3,37 @@ var SideBar =require('./SideBar');
 var SearchBar =require('./SearchBar');
 var StateStore = require('../stores/stateStore');
 var ApiUtil = require('../util/apiUtil');
+var Modal = require('react-modal');
+
+
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 var USAState = React.createClass({
 
 	getInitialState: function(){
-		return {usaState: StateStore.all()};
+		return {usaState: StateStore.all(),
+		        modalIsOpen: false};
 	},
-	componentDidMount: function(){
+	openModal: function() {
+    	this.setState({modalIsOpen: true});
+    },
 
+	closeModal: function() {
+	    this.setState({modalIsOpen: false});
+	},
+
+	componentDidMount: function(){
+     
 	 var id = parseInt(this.props.location.query.stateId);
 	 this.stateToken = StateStore.addListener(this._onChange);
      ApiUtil.fetchState(id);
@@ -58,8 +81,30 @@ var USAState = React.createClass({
 	               {this.props.children}
 	             <h1>Search for a specific city to see their blurbs</h1>
 	              <SearchBar options={options} router={this.context.router}/>
-	             </div> 
-	           </div>
+	             </div>
+	             
+                 <div className="group" id="modal">
+	             <button className="cloud-modal" onClick={this.openModal}>Have something to say about [city] ?</button>
+			     </div>
+			        <Modal
+			          isOpen={this.state.modalIsOpen}
+			          onRequestClose={this.closeModal}
+			          style={customStyles} >
+
+			          <h2>Hello</h2>
+			          <button onClick={this.closeModal}>close</button>
+			          <div>I am a modal</div>
+			          <form>
+			            <input />
+			            <button>tab navigation</button>
+			            <button>stays</button>
+			            <button>inside</button>
+			            <button>the modal</button>
+			          </form>
+			        </Modal>
+			       </div>
+			      
+	           
            </div>
 		);
 	}
