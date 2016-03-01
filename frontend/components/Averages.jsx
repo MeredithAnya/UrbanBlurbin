@@ -11,7 +11,7 @@ var Averages = React.createClass({
 
           <div className="city-averages">
 	          <li className="group city-avg-title">Traffic:</li> 
-	          <input max={5} id="r" type="range" value={this.props.avgs.traffic}/>
+	          <li>{this.props.avgs.traffic}</li>
 	          <li className="group city-avg-title">Weather:</li> 
 	          <li>{this.props.avgs.weather}</li>
 	      	  <li className="group city-avg-title">Food:</li>
