@@ -3,14 +3,14 @@ var React = require('react');
 var BlurbItem = React.createClass({
    render: function(){
    	return (
-   		<div className="blurb-item">
+   		<div className="group blurb-item">
    		<ul>
-   		<li>{this.props.traffic}</li>
-   		<li>{this.props.weather}</li>
-   		<li>{this.props.food}</li>
-   		<li>{this.props.nightlife}</li>
-   		<li>{this.props.blurb}</li>
-   		</ul>
+   		<li className="ratings">Traffic {this.props.traffic}</li>
+   		<li className="ratings">Weather {this.props.weather}</li>
+   		<li className="ratings">Food {this.props.food}</li>
+   		<li className="ratings">Nightlife {this.props.nightlife}</li>
+         </ul>
+   		<li className="group blurb-text">{this.props.blurb}</li>
    		</div>
    		);
    }

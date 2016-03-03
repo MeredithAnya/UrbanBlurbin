@@ -4,39 +4,28 @@ var SearchBar =require('./SearchBar');
 var StateStore = require('../stores/stateStore');
 var ApiUtil = require('../util/apiUtil');
 var Modal = require('react-modal');
+var AutocompleteCities = require('./AutocompleteCities');
+var ModalButton = require('./ModalButton');
+var ModalForm = require('./ModalForm');
+var Link = require('react-router').Link
 
 
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
+
 
 var USAState = React.createClass({
 
 	getInitialState: function(){
 		return {usaState: StateStore.all(),
-		        modalIsOpen: false};
-	},
-	openModal: function() {
-    	this.setState({modalIsOpen: true});
-    },
-
-	closeModal: function() {
-	    this.setState({modalIsOpen: false});
+			    cities: []};
 	},
 
 	componentDidMount: function(){
      
-	 var id = parseInt(this.props.location.query.stateId);
+	 var id = parseInt(this.props.params.stateId);
 	 this.stateToken = StateStore.addListener(this._onChange);
      ApiUtil.fetchState(id);
+
 	},
 	_onChange: function(){
 	
@@ -48,6 +37,7 @@ var USAState = React.createClass({
 	 contextTypes: {
      router: React.PropTypes.object.isRequired
     },
+  
 
 	render: function(){
 		
@@ -56,13 +46,15 @@ var USAState = React.createClass({
 			var cities = this.state.usaState.cities.map(function(city, index){
 	          return <li className='group state-cities' key={index}>{city.name}</li>;
 			});	
+			var link = "/states/" + this.state.usaState.id + "/cities/1";
+			var topCityOne = <Link to={link}>{this.state.usaState.topCityOne.name}</Link>;
+			var topCityTwo = <Link to="/">{this.state.usaState.topCityTwo.name}</Link>;
+			var topCityThree = <Link to="/">{this.state.usaState.topCityThree.name}</Link>;
+	
+			
 		}
-		var options = {
-		  types: ["(cities)"],
-		  componentRestrictions: {country: "US"}
-		 };
-		 
       
+        
 		return (
            <div>
              <SideBar/>
@@ -70,38 +62,23 @@ var USAState = React.createClass({
 	              <section className="group usa-state-item">
 	              <ul className="group state-cities">
 	              <h1 className="state-name">{this.state.usaState.name}</h1>
-	              <li className="top-cities-header">Top cities:</li>
-	              <li >Top City One</li>
-	              <li >Top City Two</li>
-	              <li >Top City Three</li>
+	              <h2 className="top-cities-header">Top cities:</h2>
+	              <li >{topCityOne}</li>
+	              <li >{topCityTwo}</li>
+	              <li >{topCityThree}</li>
 	              </ul>
+
 	              </section>
 	              
 	             <div className='group city-detail'>
 	               {this.props.children}
-	             <h1>Search for a specific city to see their blurbs</h1>
-	              <SearchBar options={options} router={this.context.router}/>
+	             <h1>Search by cities in {this.state.usaState.name}</h1>
+	              <AutocompleteCities cities={this.state.usaState.cities}/>
 	             </div>
 	             
-                 <div className="group" id="modal">
-	             <button className="cloud-modal" onClick={this.openModal}>Have something to say about [city] ?</button>
-			     </div>
-			        <Modal
-			          isOpen={this.state.modalIsOpen}
-			          onRequestClose={this.closeModal}
-			          style={customStyles} >
-
-			          <h2>Hello</h2>
-			          <button onClick={this.closeModal}>close</button>
-			          <div>I am a modal</div>
-			          <form>
-			            <input />
-			            <button>tab navigation</button>
-			            <button>stays</button>
-			            <button>inside</button>
-			            <button>the modal</button>
-			          </form>
-			        </Modal>
+                 <ModalButton cityId={this.props.params.cityId} />
+                 
+			    
 			       </div>
 			      
 	           

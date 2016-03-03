@@ -273,6 +273,43 @@ input[type=range]::-ms-fill-lower {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
+.blurb-header {
+  width: 100%;
+  margin: 0 auto;
+  height: 300px;
+  overflow: scroll;
+}
+
+.blurb-item ul {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+}
+.blurb-item {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin: 2px;
+  border: 1px solid purple;
+}
+
+.ratings {
+  position: relative;
+  display: block;
+  margin: 10px;
+  text-align: left;
+  border: 1px solid green;
+}
+
+.blurb-text {
+  float: right;
+  position: relative;
+  width: 60%;
+  display: inline-block;
+  text-align: left;
+}
+
 .city-averages {
   border: 2px solid red;
   width: 100%;
@@ -292,10 +329,71 @@ input[type=range]::-ms-fill-lower {
   border: 1px solid purple;
 }
 
-
 .usa-city {
   position: relative;
   text-align: center;
+}
+
+.city-search-container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.city-search {
+  border: 1px solid black;
+
+  background-color: white;
+  width: 170px;
+  height: 28px;
+}
+.city-search-item {
+  visibility: hidden;
+  max-height: 45px;
+  overflow: scroll;
+  border: 1px solid black;
+  width: 170px;
+}
+.city-search-item li {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.city-search:focus ~ .city-search-item {
+  visibility: visible;
+  /*background-color: blue;*/
+}
+.city-search-item:hover {
+  visibility: visible;
+}
+
+/* Mihir said that you could try having the onClick function
+ clear the list that is populating it. hope that helps :)  */
+
+/*.city-search-item:target {
+  visibility: hidden;
+}*/
+
+
+.city-search-button {
+  position: relative;
+  background: url('search-icon.png') no-repeat;
+  width: 25px;
+  height: 24px;
+  background-size: 23px 23px;
+  background-origin: content-box;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; 
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  top: 7px;
+  padding: 2px;
+
+  background-color: rgba(77, 78, 79, .4)
+
+}
+.city-search-button:hover {
+   background-color: rgba(77, 78, 79, .6)
 }
 
 .usa-state {
@@ -339,9 +437,14 @@ input[type=range]::-ms-fill-lower {
 
   position: relative;
   margin: 0 auto;
+  padding: 10px;
   font-size: 20px;
   text-align: center;
   background-color: rgba(255, 102, 102, .7);
+}
+
+.top-cities-header {
+  text-align: left;
 }
   
 .state-cities {
@@ -355,22 +458,51 @@ input[type=range]::-ms-fill-lower {
    padding-top: 10px;
 }
 
+.modal-form {
+  width: 500px;
+  height: 400px;
+}
+.modal-form label {
+ position: relative;
+ border: 1px solid red;
+}
+.modal-form input {
+ display: block;
+ position: relative;
+ border: 1px solid blue;
+}
+
+
 #modal {
+  background-color: white;
   display: inline-block;
   position: relative;
   float: right;
   top: 20px;
   width:180px;
-  height: 150px;
-  background: url('cloud.png');
-  background-size: 180px 180px;
+  height: 160px;
+  background: url('cloud.png') no-repeat;
+  background-size: 160px 160px;
   text-align: left;
-  font-size: 16px
+  font-size: 16px;
+
 }
 .cloud-modal {
+   z-index: 1;
   font-size: 15px;
   width: 52%;
-  transform: translateY(85%) translateX(54%);
+  transform: translateY(75%) translateX(45%);
+}
+.bird-icon {
+  visibility: hidden;
+  z-index: -1;
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  transform: translateX(100%);
+}
+#modal:hover .bird-icon {
+ visibility: visible;
 }
 
 .sidebar-header {
@@ -408,6 +540,13 @@ input[type=range]::-ms-fill-lower {
   margin-bottom: 6px;
   margin-top: 10px;   
 }
+.sidebar a:first-child:hover{
+  color: white;
+}
+.sidebar a:nth-child(2):hover{
+  color: white;
+}
+
 
 
 

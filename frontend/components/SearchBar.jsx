@@ -10,7 +10,7 @@ var SearchBar = React.createClass({
     },
 
 	placeChanged: function(){
-		debugger;
+		
 	 	
 	 var stateId = STATE_IDS[this.searchedCity.address_components[2].short_name];
 	 var city = this.searchedCity.address_components[0].long_name;	

@@ -66,12 +66,32 @@ State.create!(name: "Wyoming")
 
 #ALABAMA CITIES
 City.create!(name: "Birmingham", state_id: 1)
+10.times do 
+	Blurb.create!(city_id: 1, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+end
+
 City.create!(name: "Auburn", state_id: 1)
+
+10.times do 
+	Blurb.create!(city_id: 2, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+end
 City.create!(name: "Montgomery", state_id: 1)
+
+10.times do 
+	Blurb.create!(city_id: 3, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+end
 
 #ALASKA CITIES
 City.create!(name: "Anchorage", state_id: 2)
+
+10.times do 
+	Blurb.create!(city_id: 4, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+end
 City.create!(name: "Juneau", state_id: 2)
+
+10.times do 
+	Blurb.create!(city_id: 4, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+end
 
 #ARIZONA CITIES
 City.create!(name: "Phoenix", state_id: 3)

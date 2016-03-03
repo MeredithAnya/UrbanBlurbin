@@ -25,7 +25,8 @@ var ApiUtil = {
         CityActions.receiveCity(city);
       })
     });
-  }
+  },
+  
 };
 
 module.exports = ApiUtil;
