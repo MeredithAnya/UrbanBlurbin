@@ -21,7 +21,7 @@ var ModalForm = React.createClass({
     	         weather: "0",
     	         food:    "0",
     	         nightlife: "0",
-    	         blurb: "hi"};
+    	         blurb: ""};
     },
 	submitBlurb: function(e){
 		e.preventDefault();
@@ -52,24 +52,27 @@ var ModalForm = React.createClass({
 	          style={customStyles}>
 	          
 	          <form className="group modal-form" onSubmit={this.submitBlurb}>
-	            <label>Traffic</label>
-	            <label>Weather</label>
+	            <ul className="list-of-labels">
+                <label>Traffic</label>
+	              <label>Weather</label>
                 <label>Food</label>
                 <label>Nightlife</label>
+              </ul>  
+                <section className="rating-inputs">
+	              <input className="rating-traffic-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('traffic')} />
 
-	              <input type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('traffic')} />
+	              <input className="rating-weather-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('weather')}/>
 
-	              <input type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('weather')}/>
-
-                  <input type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('food')}/>
+                <input className="rating-food-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('food')}/>
                  
-	              <input type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('nightlife')}/>
+	              <input className="rating-nightlife-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('nightlife')}/>
+                </section>
                <div className="blurb-input">
-	             <label>Blurb!</label>
-	              <input type="text"  valueLink={this.linkState('blurb')}/> 
+	             <label>Here is your chance to personalize your blurb!</label>
+	              <input type="textarea" defaultValue="Start Blurbing!" valueLink={this.linkState('blurb')}/> 
 	            </div>
-	            <input type="submit"/>
-	            <button onClick={this.props.onRequestClose}>close</button>
+	            <input className="modal-submit-button" type="submit"/>
+	            <button onClick={this.props.onRequestClose}>Cancel</button>
             </form>
 	        </Modal>
    		);

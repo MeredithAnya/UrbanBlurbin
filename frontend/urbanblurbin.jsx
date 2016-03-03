@@ -31,11 +31,13 @@ var routes = (
 );
 
 document.addEventListener("DOMContentLoaded", function () {
+  
   Modal.setAppElement(document.getElementById('content'));
   ReactDOM.render(<Router history={hashHistory}>{routes}</Router>,
     document.getElementById('content')
   );
 });
+
 
 window.CityStore = CityStore;
 window.ApiUtil = ApiUtil;

@@ -209,7 +209,7 @@ input[type="submit"] {
   left: 40px;
   width: 400px;
   height: 500px;
-  margin: 20px;
+  margin: 15px;
   padding: 20px;
   background-color: rgba(242, 242, 242, .7);
 }
@@ -240,6 +240,14 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent;
 }
+input[type=range]:focus::-ms-track {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -250,24 +258,38 @@ input[type=range]::-webkit-slider-thumb {
   background: #ffffff;
   cursor: pointer;
   margin-top: -1px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  
 }
 
 input[type=range]::-webkit-slider-runnable-track {
   cursor: pointer;
   height: 16px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #ffffff;
-  border-radius: 1.3px;
+  background: -webkit-gradient(linear, left top, right top, from(#2F2727), to(#1a82f7));
+  border-radius: 16px;
   border: 0.2px solid #010101;
+  color: black;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+  cursor: pointer;
+  height: 16px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: -webkit-gradient(linear, left top, right top, from(#2F2727), to(#1a82f7));
+  border-radius: 16px;
+  border: 0.2px solid #010101;
+  color: black;
+  
 }
 
 input[type=range]::-ms-fill-lower {
-  background: #2a6495;
+  background: -webkit-gradient(linear, left top, right top, from(#2F2727), to(#1a82f7));
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: -webkit-gradient(linear, left top, right top, from(#2F2727), to(#1a82f7));
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
@@ -322,9 +344,7 @@ input[type=range]::-ms-fill-lower {
   background-color: white;
   float: right;
   color: #b4d235;
- /* background: linear-gradient(330deg, #b4d235 50%, #92ae1f 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
+  
 
  
 }
@@ -341,14 +361,19 @@ input[type=range]::-ms-fill-lower {
 }
 
 .city-averages {
-  border: 2px solid red;
+
+  background-color: #f5f5ee;
+  border: 1px solid #d2d2c1;
   width: 100%;
   height: 120px;
 }
 .city-averages li {
+
+  color: #505050;
   float: left;
-  font-size: 16px;
-  padding: 20px;
+  font-size: 24px;
+  font-weight: 250px;
+  padding: 18px;
   width: 57px;  
 }
 
@@ -356,7 +381,22 @@ input[type=range]::-ms-fill-lower {
   float: left;
   margin-top: 28px;
   position: absolute;
-  border: 1px solid purple;
+  color: green;
+  
+}
+.city-name-title {
+  position: relative;
+  
+  width: 100%;
+  height: 30px;
+  font-size: 30px;
+  font-weight: 550;
+  text-align: left;
+  padding:5px;
+  
+   background: linear-gradient(330deg, #b4d235 70%, #92ae1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .usa-city {
@@ -425,13 +465,24 @@ input[type=range]::-ms-fill-lower {
 .city-search-button:hover {
    background-color: rgba(77, 78, 79, .6)
 }
+.search-more-cities .city-search-container {
+
+  font-size: 20px;
+  width: 70%;
+
+}
+.search-more-cities {
+  margin-top: 10px;
+  font-size: 20px;
+}
 
 .usa-state {
   
   position: relative;
   display: block;
-  width: 85%;
-  margin: 0px auto;
+  margin: 0px;
+  width: 1050px;
+  left: 100px;
   height: 600px;
   top: 100px;
   border-radius: 4px;
@@ -446,7 +497,7 @@ input[type=range]::-ms-fill-lower {
   width: 300px;
   height: 500px;
 	font-size: 40px;
-	margin: 20px;
+	margin: 15px;
   padding: 20px;
 	text-align: center;
 	background-color: rgba(242, 242, 242, .7);
@@ -508,49 +559,130 @@ input[type=range]::-ms-fill-lower {
 }
 
 .modal-form {
-  width: 500px;
+  float: right;
+  width: 400px;
   height: 400px;
   position: relative;
-  border: 2px solid orange;
+  
+  background-color: rgba(242, 242, 242, .7);
 }
-.modal-form label {
+.list-of-labels {
+ float: left;
  position: relative;
- border: 1px solid red;
-}
-.modal-form input {
-  width: 200px;
-  height: 100px;
- display: block;
- position: relative;
- border: 1px solid blue;
+ 
+ height: 50%;
+ width: 40%;
+ background-color: rgba(242, 242, 242, .7);
 
+}
+.list-of-labels label{
+  display: block;
+  position: relative;
+  text-align: left;
+  font-size: 20px;
+  width: 100px;
+  padding: 14px;
+}
+.rating-weather-input{
+  width: 200px;
+  height: 30px;
+  display: block;
+  padding: 5px;
+  position: relative;
+}
+.rating-food-input{
+  width: 200px;
+  height: 30px;
+  display: block;
+  padding: 5px;
+  position: relative;
+}
+.rating-nightlife-input{
+  width: 200px;
+  height: 30px;
+  display: block;
+  padding: 5px;
+  position: relative;
+}
+.rating-traffic-input{
+  width: 200px;
+  height: 30px;
+  display: block;
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+}
+.rating-inputs { 
+
+ width: 226px;
+ height: 190px;
+ float: left;
+ background-color: rgba(242, 242, 242, .7);
+ padding: 5px;
 }
 .blurb-input {
   display: inline-block;
   position: relative;
-  width: 300px;
+  float: left;
+  
+  padding: 10px;
+  width: 380px;
   height: 50px;
+  background-color: rgba(242, 242, 242, .7);
+}
+.blurb-input input {
+  padding: 0px;
+  border: 1px solid black;
+  background-color: white;
+  width: 370px;
+  max-height: 70px;
+  overflow: scroll;
+}
+.modal-submit-button {
+  text-align: center;
+   position: relative;
+   width: 50px;
+   height: 25px;
+   padding: 10px;
+   float: right;
+   margin: 3px;
+   background-color: #b4d235;
+}
+.modal-submit-button:hover {
+  background-color: #14c9ff; 
+  color: #f5f5ee;
+}
+.modal-form button {
+  text-align: center;
+  position: relative;
+  width: 50px;
+   height: 25px;
+   padding: 10px;
+   float: right;
+   margin: 3px;
+   background-color: #b4d235;
+}
+.modal-form button:hover {
+  background-color: #ff0000;
+  color: #f5f5ee;
 }
 
 .modal-header {
-  background-color: white;
   display: inline-block;
   position: relative;
   float: right;
-  top: 20px;
-  width:180px;
-  height: 160px;
-  background: url('cloud.png') no-repeat;
-  background-size: 160px 160px;
-  text-align: left;
-  font-size: 16px;
-
+ 
 }
 .cloud-modal {
-   z-index: 1;
-  font-size: 15px;
-  width: 52%;
-  transform: translateY(75%) translateX(45%);
+  background-color: #14c9ff;
+  margin: 20px;
+  border-radius: 10px;
+  width:110px;
+  height: 110px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  
 }
 .bird-icon {
   visibility: hidden;

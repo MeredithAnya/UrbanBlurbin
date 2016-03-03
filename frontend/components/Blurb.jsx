@@ -16,10 +16,10 @@ var Blurb = React.createClass({
   	}
   	return (
   		<div className="blurb-header">
-  		This is the blurb component
+  		
   		{blurbItems}
   		</div>
-  		)
+  		);
   }
 });
 

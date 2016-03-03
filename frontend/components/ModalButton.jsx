@@ -19,7 +19,7 @@ var ModalButton = React.createClass({
 	  if (this.props.cityId){
     	var city = CityStore.find(parseInt(this.props.cityId));
     	if (city){
-        	return (<div className="group modal-header">
+        	return (<div className="modal-header">
                                <img className="bird-icon" src="./assets/bird-icon.png"></img>
         					   <button className="cloud-modal" onClick={this.openModal}>Have something to say about {city.name} ?</button>
 			     	<ModalForm isOpen={this.state.modalIsOpen}

@@ -36,13 +36,14 @@ var City = React.createClass({
 			}	
 			if (this.state.city.avgs){
 				var averages = this.state.city.avgs;
+				var overall = averages.overall;
 			}
 			var cityName = this.state.city.name;
 		}
 		
 		return (
 			<div className="group usa-city">
-			  <li>Stats for {cityName}</li>
+			  <li className="city-name-title">{cityName} <span style={{float: 'right', fontSize: '22px', }} className="overall-score"> Overall {overall}</span></li>
 			  <Averages avgs={averages}/>
 			  <div className="city-blurbs">
               	<Blurb blurbs={blurbs}/>

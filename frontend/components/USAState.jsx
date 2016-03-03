@@ -54,7 +54,16 @@ var USAState = React.createClass({
 			var topCityThree = <li className="top-city"><Link className="top-city-link" to="/">{this.state.usaState.topCityThree.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
 			}
 				
-			
+			if (this.props.params.cityId){
+				var searchMoreCities = (<div className="search-more-cities">
+										<h1>Search other cities in {this.state.usaState.name}</h1>
+	                                	<AutocompleteCities cities={this.state.usaState.cities}/>
+	                                </div>);
+			}else 
+			  var searchCities = (<div>
+										<h1>Search for cities in {this.state.usaState.name}</h1>
+	                                	<AutocompleteCities cities={this.state.usaState.cities}/>
+	                               </div>);
 	
 			
 		}
@@ -72,13 +81,13 @@ var USAState = React.createClass({
 	              {topCityTwo}
 	              {topCityThree}
 	              </ul>
+	              {searchMoreCities}
 
 	              </section>
 	              
 	             <div className='group city-detail'>
 	               {this.props.children}
-	             <h1>Search by cities in {this.state.usaState.name}</h1>
-	              <AutocompleteCities cities={this.state.usaState.cities}/>
+	             {searchCities}
 	             </div>
 	             
                  <ModalButton cityId={this.props.params.cityId} />
