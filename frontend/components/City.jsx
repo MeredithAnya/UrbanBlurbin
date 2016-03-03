@@ -19,7 +19,7 @@ var City = React.createClass({
      this.setState({city: CityStore.find(id)});
 	},
 	componentWillReceiveProps: function(newProps){
-      
+      debugger;
 	},
 	componentWillUnmount: function(){
       this.cityToken.remove();
@@ -32,6 +32,7 @@ var City = React.createClass({
 				this.state.city.blurbs.forEach(function(blurb){
 					blurbs.push(blurb);
 				});
+				blurbs = blurbs.reverse();
 			}	
 			if (this.state.city.avgs){
 				var averages = this.state.city.avgs;

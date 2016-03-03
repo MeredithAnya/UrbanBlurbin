@@ -46,10 +46,15 @@ var USAState = React.createClass({
 			var cities = this.state.usaState.cities.map(function(city, index){
 	          return <li className='group state-cities' key={index}>{city.name}</li>;
 			});	
+			if (this.state.usaState.topCityOne){
+
 			var link = "/states/" + this.state.usaState.id + "/cities/1";
-			var topCityOne = <Link to={link}>{this.state.usaState.topCityOne.name}</Link>;
-			var topCityTwo = <Link to="/">{this.state.usaState.topCityTwo.name}</Link>;
-			var topCityThree = <Link to="/">{this.state.usaState.topCityThree.name}</Link>;
+			var topCityOne =<li className="top-city"><Link className="top-city-link" to={link}>{this.state.usaState.topCityOne.name}</Link><span className="top-city-rating">{this.state.usaState.topCityOne.avgs.overall}</span></li>;
+			var topCityTwo = <li className="top-city"><Link className="top-city-link" to="/">{this.state.usaState.topCityTwo.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
+			var topCityThree = <li className="top-city"><Link className="top-city-link" to="/">{this.state.usaState.topCityThree.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
+			}
+				
+			
 	
 			
 		}
@@ -62,10 +67,10 @@ var USAState = React.createClass({
 	              <section className="group usa-state-item">
 	              <ul className="group state-cities">
 	              <h1 className="state-name">{this.state.usaState.name}</h1>
-	              <h2 className="top-cities-header">Top cities:</h2>
-	              <li >{topCityOne}</li>
-	              <li >{topCityTwo}</li>
-	              <li >{topCityThree}</li>
+	              <h2 className="top-cities-header">TOP CITIES</h2>
+	              {topCityOne}
+	              {topCityTwo}
+	              {topCityThree}
 	              </ul>
 
 	              </section>

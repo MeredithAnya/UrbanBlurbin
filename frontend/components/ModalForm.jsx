@@ -38,9 +38,9 @@ var ModalForm = React.createClass({
 		}
        debugger;
     	ApiUtil.createBlurb(blurb);
-    	this.props.onRequestClose;
+    	this.props.onRequestClose();
 
-    },
+    }, 
 
     render: function(){
     	
@@ -69,8 +69,8 @@ var ModalForm = React.createClass({
 	              <input type="text"  valueLink={this.linkState('blurb')}/> 
 	            </div>
 	            <input type="submit"/>
-	          </form>
 	            <button onClick={this.props.onRequestClose}>close</button>
+            </form>
 	        </Modal>
    		);
    }

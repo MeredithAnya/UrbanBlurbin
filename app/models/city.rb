@@ -20,6 +20,7 @@ class City < ActiveRecord::Base
     end
 
     def averages
+        return {} if self.blurbs.length == 0
     	traffics = self.blurbs.group(:traffic).count
     	traffic_avg = (traffics.keys.inject(:+)/traffics.length.to_f)
 

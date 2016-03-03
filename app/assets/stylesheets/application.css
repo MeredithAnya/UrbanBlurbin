@@ -29,7 +29,7 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 ul {
   list-style: none;
@@ -283,23 +283,50 @@ input[type=range]::-ms-fill-lower {
 .blurb-item ul {
   position: relative;
   display: inline-block;
-  width: 30%;
-  height: 100%;
+  width: 120px;
+  max-height: 140px;
+  background-color: #dedede;
+  padding-left: 10px;
+  float: left;
+  font-size: 18px;
 }
 .blurb-item {
   position: relative;
   display: inline-block;
+  width: 97%;
   float: left;
-  margin: 2px;
-  border: 1px solid purple;
+  padding: 2px;
+  
+  background-color: #f5f5ee;
+}
+.rating-title {
+  position: relative;
+  float: left;
 }
 
 .ratings {
+  width: 100px;
+  height: 24px;
+  float: left;
   position: relative;
   display: block;
-  margin: 10px;
-  text-align: left;
-  border: 1px solid green;
+  margin: 5px;
+
+  vertical-align: baseline;
+}
+.rating-num {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  background-color: white;
+  float: right;
+  color: #b4d235;
+ /* background: linear-gradient(330deg, #b4d235 50%, #92ae1f 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+
+ 
 }
 
 .blurb-text {
@@ -308,6 +335,9 @@ input[type=range]::-ms-fill-lower {
   width: 60%;
   display: inline-block;
   text-align: left;
+  max-height: 140px;
+  background-color: #f5f5ee;
+  color: #505050;
 }
 
 .city-averages {
@@ -440,11 +470,30 @@ input[type=range]::-ms-fill-lower {
   padding: 10px;
   font-size: 20px;
   text-align: center;
-  background-color: rgba(255, 102, 102, .7);
+  background-color: #b4d235;
+  /*background-color: rgba(255, 102, 102, .7);*/
 }
 
 .top-cities-header {
   text-align: left;
+}
+.top-city {
+  width: 280px;
+  height: 30px;
+}
+.top-city-link {
+  display: block;
+  float: left;
+}
+.top-city-rating {
+  display: block;
+  float: right;
+  padding: 5px;
+  background-color: #f5f5ee;
+}
+.top-city-rating:hover {
+  background-color: #14c9ff; 
+  color: #f5f5ee;
 }
   
 .state-cities {
@@ -452,7 +501,7 @@ input[type=range]::-ms-fill-lower {
    top: 25px;
    margin-top: 10px;
    margin-bottom: 10px;
-   float: left;
+   
    width: 100%;
    display: block;
    padding-top: 10px;
@@ -474,6 +523,7 @@ input[type=range]::-ms-fill-lower {
  display: block;
  position: relative;
  border: 1px solid blue;
+
 }
 .blurb-input {
   display: inline-block;

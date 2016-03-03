@@ -3,6 +3,7 @@ json.extract! @state, :id, :name
 	json.cities do 
 	  json.array! @state.cities, :name
 	end 
+  if @top_city_one
 	json.topCityOne do 
 	  json.extract! @top_city_one, :id, :name 
 	    json.avgs do 
@@ -22,7 +23,8 @@ json.extract! @state, :id, :name
          end
          
          
-    end   
+    end  
+  end   
 
 
 
