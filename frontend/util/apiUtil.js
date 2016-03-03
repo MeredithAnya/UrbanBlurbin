@@ -26,6 +26,18 @@ var ApiUtil = {
       })
     });
   },
+  createBlurb: function(blurb){
+    $.ajax({
+      url: 'api/blurbs',
+      type: 'POST',
+      dataType: 'json',
+      data: blurb,
+      success:(function(city){
+        CityActions.receiveCity(city);
+      })
+
+    });
+  }
   
 };
 

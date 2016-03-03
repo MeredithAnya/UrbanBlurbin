@@ -461,19 +461,28 @@ input[type=range]::-ms-fill-lower {
 .modal-form {
   width: 500px;
   height: 400px;
+  position: relative;
+  border: 2px solid orange;
 }
 .modal-form label {
  position: relative;
  border: 1px solid red;
 }
 .modal-form input {
+  width: 200px;
+  height: 100px;
  display: block;
  position: relative;
  border: 1px solid blue;
 }
+.blurb-input {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 50px;
+}
 
-
-#modal {
+.modal-header {
   background-color: white;
   display: inline-block;
   position: relative;

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :states, only: [:show] 
     resources :cities, only: [:show]
     get 'city/:cityName/:stateId/', to: 'cities#city'
+    resources :blurbs, only: [:create]
   end
 
   

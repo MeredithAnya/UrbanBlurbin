@@ -13,7 +13,8 @@ var CityActions = {
 			actionType: "CITY_RECEIVED",
 			city: city
 		});
-	}
+	},
+	
 
 };
 
