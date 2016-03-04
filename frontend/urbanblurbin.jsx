@@ -39,6 +39,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-window.CityStore = CityStore;
-window.ApiUtil = ApiUtil;
+
 
