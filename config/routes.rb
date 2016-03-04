@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
    namespace :api, defaults: {format: :json} do
     resources :states, only: [:show] 
-    resources :cities, only: [:show]
+    resources :cities, only: [:show, :index]
     get 'city/:cityName/:stateId/', to: 'cities#city'
     resources :blurbs, only: [:create]
   end

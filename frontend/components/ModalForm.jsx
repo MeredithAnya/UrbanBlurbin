@@ -69,7 +69,7 @@ var ModalForm = React.createClass({
                 </section>
                <div className="blurb-input">
 	             <label>Here is your chance to personalize your blurb!</label>
-	              <input type="textarea" defaultValue="Start Blurbing!" valueLink={this.linkState('blurb')}/> 
+	              <textarea defaultValue="Start Blurbing!" valueLink={this.linkState('blurb')}/> 
 	            </div>
 	            <input className="modal-submit-button" type="submit"/>
 	            <button onClick={this.props.onRequestClose}>Cancel</button>

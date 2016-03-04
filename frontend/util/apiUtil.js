@@ -26,6 +26,16 @@ var ApiUtil = {
       })
     });
   },
+  fetchBlurbCities: function(){
+    $.ajax({
+      url: 'api/cities/',
+      type: 'GET',
+      dataType: 'json',
+      success:(function(cities){
+        CityActions.receiveBlurbCities(cities);
+      })
+    });
+  },
   createBlurb: function(blurb){
     $.ajax({
       url: 'api/blurbs',

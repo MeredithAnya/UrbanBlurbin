@@ -1,5 +1,8 @@
 class Api::CitiesController < ApplicationController
-
+    def index
+    	@cities = City.includes(:state).all
+    	render :index
+    end
 	def show
 		@city = City.find(params[:id])
 		@averages = @city.averages

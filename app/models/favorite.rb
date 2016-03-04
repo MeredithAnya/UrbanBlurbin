@@ -13,6 +13,5 @@ class Favorite < ActiveRecord::Base
 	class_name: 'City'
 
     
-
-
+    
 end

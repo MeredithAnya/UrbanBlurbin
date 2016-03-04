@@ -14,6 +14,13 @@ var CityActions = {
 			city: city
 		});
 	},
+	receiveBlurbCities: function(cities){
+		
+		AppDispatcher.dispatch({
+			actionType: "BLURB_CITIES_RECEIVED",
+			cities: cities
+		});
+	}
 	
 
 };
