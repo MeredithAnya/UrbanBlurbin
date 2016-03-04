@@ -1,7 +1,7 @@
 var React = require('react');
 var SearchAllCities = require('./SearchAllCities');
 var BlurbCityStore = require('../stores/BlurbCityStore');
-var ApiUtil = require('../util/ApiUtil');
+var ApiUtil = require('../util/apiUtil');
 
 var WriteABlurb = React.createClass({
   getInitialState: function(){
