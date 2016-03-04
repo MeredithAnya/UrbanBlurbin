@@ -4,6 +4,15 @@ class User < ActiveRecord::Base
 
 	attr_reader :password
 
+	has_many :favorites,
+	primary_key: :id,
+	foreign_key: :user_id,
+	class_name: 'Favorite'
+
+	has_many :favorite_cities,
+	through: :favorites,
+	source: :city
+
 	after_initialize :ensure_session_token
 
 	def self.find_by_credentials(username, password)
