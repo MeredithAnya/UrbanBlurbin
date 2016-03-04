@@ -79,7 +79,7 @@ li {
 	}
 	
 html {
-	background-image: url('goldengate.jpeg');
+	background-image: url('clouds-background.png');
 	background-color: transparent;
 	background-size: 100%;
 	background-position: fixed;
@@ -223,7 +223,7 @@ input[type="submit"] {
 }
 
 input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
     float: left;
     margin: 5px 10px;
 }
@@ -236,7 +236,7 @@ input[type=range]::-ms-track {
   width: 100%;
   height: 30px;
   cursor: pointer;
-  background: transparent; /* Hides the slider so custom styles can be added */
+  background: transparent; 
   border-color: transparent;
   color: transparent;
 }
@@ -783,7 +783,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 .controls {
-  margin-top: 10px;`
+  margin-top: 10px;
   border: 1px solid transparent;
   border-radius: 2px 0 0 2px;
   box-sizing: border-box;
