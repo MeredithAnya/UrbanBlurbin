@@ -1,7 +1,7 @@
 
 json.extract! @state, :id, :name
 	json.cities do 
-	  json.array! @state.cities, :name
+	  json.array! @state.cities, :name, :id
 	end 
   if @top_city_one
 	json.topCityOne do 

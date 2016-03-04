@@ -6,6 +6,7 @@ var AutocompleteCities = React.createClass({
 	},
 
 	handleInput: function (event) {
+
 	  this.setState({ inputVal: event.currentTarget.value });
 	},
 
@@ -34,11 +35,25 @@ var AutocompleteCities = React.createClass({
 	    return matches;
 	},
 
-	  selectCity: function (event) {
+	 selectCity: function (event) {
 	  	event.preventDefault();
 	    var city = event.currentTarget.innerText;
 	    
 	    this.setState({ inputVal: city });
+	  },
+	  handleSearch: function(event){
+           event.preventDefault();
+           
+           var id;
+           var stateId = this.props.stateId;
+           var name = this.state.inputVal;
+           this.props.cities.forEach(function(city){
+	            if (city.name == name){
+	            	id = city.id;
+	            }
+	       });
+
+          this.props.router.replace({pathname:'/states/' + stateId + "/cities/" + id});
 	  },
 
 	  render: function () {
@@ -54,7 +69,7 @@ var AutocompleteCities = React.createClass({
 	    return(
 	      <div className="city-search-container">
 	        <input className="city-search" onChange={this.handleInput} value={this.state.inputVal} />
-	        <button className="city-search-button"></button>
+	        <button onClick={this.handleSearch} className="city-search-button"></button>
 	        <ul className="city-search-item">
 	          {results}
 	        </ul>

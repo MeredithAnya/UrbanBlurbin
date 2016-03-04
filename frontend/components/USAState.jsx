@@ -57,12 +57,12 @@ var USAState = React.createClass({
 			if (this.props.params.cityId){
 				var searchMoreCities = (<div className="search-more-cities">
 										<h1>Search other cities in {this.state.usaState.name}</h1>
-	                                	<AutocompleteCities cities={this.state.usaState.cities}/>
+	                                	<AutocompleteCities router={this.context.router} stateId={this.state.usaState.id} cities={this.state.usaState.cities}/>
 	                                </div>);
 			}else 
 			  var searchCities = (<div>
 										<h1>Search for cities in {this.state.usaState.name}</h1>
-	                                	<AutocompleteCities cities={this.state.usaState.cities}/>
+	                                	<AutocompleteCities router={this.context.router} stateId={this.state.usaState.id} cities={this.state.usaState.cities}/>
 	                               </div>);
 	
 			
