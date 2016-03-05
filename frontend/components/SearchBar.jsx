@@ -29,6 +29,9 @@ var SearchBar = React.createClass({
            	CityActions.receiveCity(city);
            	that.stateId = stateId;
            	that.city = CityStore.find(city.id);
+           },
+           error: function(){
+           	console.log("this didnt work");
            }
 		 });
 		setTimeout(this.redirectToSearch,1000);

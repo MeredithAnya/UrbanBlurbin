@@ -83,6 +83,7 @@ html {
 	background-color: transparent;
 	background-size: 100%;
 	background-position: fixed;
+
 	
 }
 
@@ -127,21 +128,25 @@ input[type="submit"] {
   width: 100%;
   margin: 0 auto;
   background-color: #4d4e4f;
-  opacity: 0.80;
+  
 }
 
 .header-logo {
   position: relative;
   float: left;
-  top: 5px;
+  top: 14px;
   left: 20px;
-  padding-top: 0;
-  height: 65px;
-  width: 140px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px 2px;
-  background-color: #14c9ff;
+  padding: 5px;
+  height: 30px;
+  width: 156px;
+  font-style: bold;
+  
+  font-size: 25px;
+  font-weight: 400px;
+  color: #4d4e4f;
+  background: linear-gradient(90deg, #14c9ff 50%, #b4d235 50%);
   opacity: 1;
+  text-align: center;
 }
 
 .header-nav {
@@ -475,14 +480,18 @@ input[type=range]:focus::-ms-fill-upper {
   margin-top: 10px;
   font-size: 20px;
 }
-
+ .state-component {
+  
+  position: relative;
+  width: 100%;
+ }
 .usa-state {
+  z-index: -3;
   float: right;
   position: relative;
   display: block;
   margin: 0px;
   width: 1050px;
-  left: 50px;
   height: 600px;
   top: 100px;
   border-radius: 4px;
@@ -571,7 +580,7 @@ input[type=range]:focus::-ms-fill-upper {
  position: relative;
  
  height: 50%;
- width: 40%;
+ width: 37%;
  background-color: rgba(242, 242, 242, .7);
 
 }
@@ -614,11 +623,26 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .rating-inputs { 
 
- width: 226px;
+ width: 230px;
  height: 190px;
  float: left;
  background-color: rgba(242, 242, 242, .7);
  padding: 5px;
+}
+.input-number-dynamic {
+  float: left;
+  height: 190px;
+  width: 8px;
+  background-color: rgba(242, 242, 242, .7);
+  position: relative;
+  display: inline-block;
+  bottom: 8px;
+}
+.input-number-dynamic span{
+  float: left;
+  padding-top: 30px;
+
+
 }
 .blurb-input {
   display: inline-block;
@@ -740,12 +764,12 @@ input[type=range]:focus::-ms-fill-upper {
   color: white;
 }
 .write-blurb-tab{
-  
-  position: relative;
+  z-index: 134;
+  position: absolute;
   display: block;
   width: 172px;
   height: 100px;
-  float: left;
+  left: 100px;
   background-color: #14c9ff; 
 }
 .city-search-blurb-container {
@@ -753,7 +777,6 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .city-search-blurb {
   border: 1px solid black;
-
   background-color: white;
   width: 150px;
   height: 28px;

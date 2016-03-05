@@ -70,7 +70,7 @@ var USAState = React.createClass({
       
         
 		return (
-           <div>
+           <div className="state-component">
              <SideBar/>
 	           <div className="group usa-state">
 	              <section className="group usa-state-item">

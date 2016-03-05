@@ -47,6 +47,17 @@ var ApiUtil = {
       })
 
     });
+  },
+  fetchUserFavorites: function(username){
+    $.ajax({
+      url: 'api/favorites' + username,
+      type: 'GET',
+      dataType: 'json',
+      success:(function(favorites){
+        debugger;
+      })
+
+    });
   }
   
 };

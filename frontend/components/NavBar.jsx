@@ -34,7 +34,7 @@ var NavBar = React.createClass({
 		return (
 			<header className="header">	
 	          <nav className="group header-nav">
-	           <img className="group header-logo" src="./assets/UrbanBlurbin-logo.png"/>
+	           <h1 className="group header-logo">Urban  Blurbin</h1>
 		           <ul className="group header-list">
 		           <li>{signing}</li>
 		           {signup}

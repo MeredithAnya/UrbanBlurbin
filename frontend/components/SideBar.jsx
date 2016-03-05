@@ -17,6 +17,9 @@ var SideBar = React.createClass({
     if (this.state.blurbOpen){
       var blurbTab = <WriteABlurb closeBlurb={this.closeBlurb}/>;
     }
+    if (window.current_user){
+      debugger;
+    }
    	return (
      
    		<header className="group sidebar-header">

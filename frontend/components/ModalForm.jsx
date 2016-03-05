@@ -1,6 +1,7 @@
 var React = require('react');
 var Modal = require('react-modal');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
+var ApiUtil = require('../util/apiUtil');
 
 const customStyles = {
   content : {
@@ -36,7 +37,7 @@ var ModalForm = React.createClass({
 			city_id: this.props.cityId
 		  }
 		}
-       debugger;
+       
     	ApiUtil.createBlurb(blurb);
     	this.props.onRequestClose();
 
@@ -67,6 +68,12 @@ var ModalForm = React.createClass({
                  
 	              <input className="rating-nightlife-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('nightlife')}/>
                 </section>
+                <section className="input-number-dynamic">
+                <span >{this.state.traffic}</span>
+                <span >{this.state.weather}</span>
+                <span >{this.state.food}</span>
+                <span >{this.state.nightlife}</span>
+                </section> 
                <div className="blurb-input">
 	             <label>Here is your chance to personalize your blurb!</label>
 	              <textarea defaultValue="Start Blurbing!" valueLink={this.linkState('blurb')}/> 

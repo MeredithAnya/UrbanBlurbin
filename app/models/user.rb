@@ -21,6 +21,12 @@ class User < ActiveRecord::Base
 		nil
 	end
 
+	def self.findByUsername(username)
+		user = User.find_by(username: username)
+		return user if user
+		nil
+	end
+
 	def password=(password)
 		@password = password
 		self.password_digest = BCrypt::Password.create(password)
