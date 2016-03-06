@@ -1,5 +1,5 @@
 var React = require('react');
-var FavoriteStore = require('../stores/FavoriteStore');
+var FavoriteStore = require('../stores/favoriteStore');
 var ApiUtil = require('../util/apiUtil');
 var Link = require('react-router').Link
 

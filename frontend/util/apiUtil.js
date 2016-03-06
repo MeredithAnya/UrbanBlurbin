@@ -1,6 +1,6 @@
 var StateActions = require('../actions/stateActions');
 var CityActions = require('../actions/cityActions');
-var FavoriteActions = require('../actions/FavoriteActions');
+var FavoriteActions = require('../actions/favoriteActions');
 
 var ApiUtil = {
   fetchState: function(id){
