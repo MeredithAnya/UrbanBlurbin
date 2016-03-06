@@ -59,6 +59,28 @@ li {
   height: 40px;
 }
 
+#heart-icon-red {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  padding: 4px;
+  margin-top: 4px;
+  background-color: white;
+}
+#heart-icon-red:hover {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  color: black;
+  padding: 4px;
+  background-color: pink;
+}
+
+
 
 .login-background {
 	
@@ -365,6 +387,7 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: white;
   float: right;
   color: #b4d235;
+  text-align: center;
   
 
  
@@ -409,20 +432,38 @@ input[type=range]:focus::-ms-fill-upper {
   position: relative;
   
   width: 100%;
-  height: 30px;
-  font-size: 30px;
+  height: 35px;
+  font-size: 35px;
   font-weight: 550;
   text-align: left;
-  padding:5px;
+  padding-bottom:8px;
   
-   background: linear-gradient(330deg, #b4d235 70%, #92ae1f 100%);
+ /*  background: linear-gradient(330deg, #b4d235 70%, #92ae1f 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;*/
 }
-
+.overall-score {
+  line-height: 46px;
+   text-align: right;
+   float: right;
+   padding: 5px;
+   top: 10px;
+   
+   height: 100%;
+}
 .usa-city {
   position: relative;
+ 
+}
+.usa-city button{
+  margin-left: 30px;
+  color: red;
   text-align: center;
+  background-color: transparent;
+  float: right;
+  
+   
+
 }
 
 .city-search-container {
@@ -801,7 +842,7 @@ input[type=range]:focus::-ms-fill-upper {
   text-shadow: 2px 2px black;
   margin-bottom: 6px;
   margin-top: 10px; 
-  transition: .5s;  
+    
 }
 .sidebar-blurb {
   right: 5px;
@@ -816,7 +857,7 @@ input[type=range]:focus::-ms-fill-upper {
   text-shadow: 2px 2px black;
   margin-bottom: 6px;
   margin-top: 10px;
-  transition: .5s; 
+   
 
 }
 .sidebar-favorites {
@@ -831,7 +872,7 @@ input[type=range]:focus::-ms-fill-upper {
   color: #14c9ff;
   text-shadow: 2px 2px black;
   margin-top: 10px; 
-  transition: .5s;
+  
 }
 .sidebar-favorites-active {
   right: 5px;
@@ -845,7 +886,7 @@ input[type=range]:focus::-ms-fill-upper {
   color: white;
   text-shadow: 2px 2px black;
   background-color: #14c9ff;
-  
+  cursor: pointer;
   margin-top: 10px; 
   
 }
@@ -855,10 +896,22 @@ input[type=range]:focus::-ms-fill-upper {
   position: absolute;
   display: block;
   width: 172px;
-  height: 180px;
+  height: 195px;
   left: 100px;
   top: 258px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   background-color: #14c9ff; 
+}
+.favorites-close {
+  width: 96%;
+  display: block;
+  padding-top: 5px;
+  text-align: right;
+  font-size: 14px;
+  background-color: transparent;
+  color: white;
 }
 .favorites-city {
  text-align: left;
@@ -869,7 +922,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .favorites-list {
   width: 90%;
-  height: 90%;
+  height: 80%;
   margin: 10px;
   font-weight: 500;
   background-color: rgba(245, 245, 238, .35)

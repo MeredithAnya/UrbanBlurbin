@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get 'city/:cityName/:stateId/', to: 'cities#city'
     resources :blurbs, only: [:create]
     get 'favorites/:username', to: 'favorites#show'
-    post 'favorites/:cityId/:username', to: 'favorities#create'
+    post 'favorites', to: 'favorites#create'
   end
 
   

@@ -3,16 +3,19 @@ var CityStore = require('../stores/cityStore');
 var ApiUtil = require('../util/apiUtil');
 var Blurb = require('./Blurb');
 var Averages = require('./Averages');
+var FavoriteStore = require('../stores/favoriteStore');
 
 var City = React.createClass({
 	getInitialState: function(){
-		return {city: {}};
+		return {city: {},
+	            favorites: FavoriteStore.all()};
 	},
 	componentDidMount: function(){
 
      var id = parseInt(this.props.params.cityId);
 	 this.cityToken = CityStore.addListener(this._onChange);
      ApiUtil.fetchCity(id);
+
 	},
 	_onChange: function(){
 		
@@ -27,7 +30,20 @@ var City = React.createClass({
 	componentWillUnmount: function(){
       this.cityToken.remove();
 	},
+	favoriteCity: function(){
+
+		var favorite = { favorite: {
+
+			username: window.current_user,
+			city_id: this.state.city.id
+		  }
+		}
+		
+		ApiUtil.favoriteCity(favorite);
+		
+	},
 	render: function(){
+        debugger;
 		
 		if (this.state.city){
 			if (this.state.city.blurbs){
@@ -43,10 +59,15 @@ var City = React.createClass({
 			}
 			var cityName = this.state.city.name;
 		}
+
 		
 		return (
 			<div className="group usa-city">
-			  <li className="city-name-title">{cityName} <span style={{float: 'right', fontSize: '22px', }} className="overall-score"> Overall {overall}</span></li>
+			  <section className="city-name-title">
+			  <span className="city-name">{cityName}</span>
+			  <span  style={{float: 'right', fontSize: '22px', }} className="overall-score"> Overall {overall}</span>
+			  <button onClick={this.favoriteCity}><img id="heart-icon-red" src="./assets/heart-icon.png"></img></button>
+			  </section>
 			  <Averages avgs={averages}/>
 			  <div className="city-blurbs">
               	<Blurb blurbs={blurbs}/>

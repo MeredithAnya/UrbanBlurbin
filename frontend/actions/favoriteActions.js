@@ -6,7 +6,8 @@ var FavoriteActions = {
 			actionType: "FAVORITES_RECEIVED",
 			favorites: favorites
 		});
-	}
+	},
+	
 
 };
 

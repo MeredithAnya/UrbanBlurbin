@@ -10,12 +10,14 @@ var SideBar = React.createClass({
   },
   openBlurb: function(){
    this.setState({blurbOpen: true});
+   this.setState({favoriteOpen: false});
   },
   closeBlurb: function(){
     this.setState({blurbOpen: false});
   },
   openFavorites: function(){
-    this.setState({favoriteOpen: true});
+    this.state.favoriteOpen ? this.setState({favoriteOpen: false}) : this.setState({favoriteOpen: true});
+    this.setState({blurbOpen: false});
   },
   closeFavorites: function(){
     this.setState({favoriteOpen: false});
@@ -32,7 +34,7 @@ var SideBar = React.createClass({
       var favoriteTabLi = <li onClick={this.openFavorites} className={favoritesClass}>My Fav Cities<img id="city-icon" src="./assets/city-icon.png"></img></li>;
     }
     if (this.state.favoriteOpen){ 
-      var favoriteTab = <Favorites/>;
+      var favoriteTab = <Favorites closeFavorites={this.closeFavorites}/>;
     }
    	return (
      

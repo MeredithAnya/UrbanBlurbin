@@ -8,8 +8,9 @@ class Api::FavoritesController < ApplicationController
 	end
 
 	def create
-		user = User.findByUsername(params[:username])
-		Favorite.create!(city_id: params[:cityId], user_id: user.id)
+		
+		user = User.findByUsername(params[:favorite][:username])
+		Favorite.create!(city_id: params[:favorite][:city_id], user_id: user.id)
 		@favorites = user.favorite_cities
 		render :show
 	end
@@ -17,7 +18,7 @@ class Api::FavoritesController < ApplicationController
 
 	private
 	def favorite_params
-		params.require(:favorite).permit(:username)
+		params.require(:favorite).permit(:username, :city_id)
 	end
 	
 end

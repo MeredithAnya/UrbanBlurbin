@@ -28,7 +28,8 @@ var Favorities = React.createClass({
 		}
 		return  (
 			<div className="favorites-tab">
-			 <ul className="favorites-list">
+			<button className="favorites-close" onClick={this.props.closeFavorites}>X</button>
+			 <ul onClick={this.props.closeFavorites} className="favorites-list">
               {favs}
              </ul>
 			</div>

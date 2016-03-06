@@ -59,6 +59,19 @@ var ApiUtil = {
       })
 
     });
+  },
+  favoriteCity: function(favorite){
+    
+    $.ajax({
+      url: 'api/favorites',
+      type: 'POST',
+      dataType: 'json',
+      data: favorite,
+      success:(function(favorites){
+        FavoriteActions.receiveFavorites(favorites);
+      })
+
+    });
   }
   
 };
