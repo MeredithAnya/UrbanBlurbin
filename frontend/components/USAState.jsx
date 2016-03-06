@@ -27,8 +27,14 @@ var USAState = React.createClass({
      ApiUtil.fetchState(id);
 
 	},
+	componentWillReceiveProps: function(newProps){
+     
+     	var id = parseInt(newProps.params.stateId);
+     	ApiUtil.fetchState(id); 	
+     
+	},
 	_onChange: function(){
-	
+	 
      this.setState({usaState: StateStore.all()});
 	},
 	componentWillUnmount: function(){
@@ -41,17 +47,17 @@ var USAState = React.createClass({
 
 	render: function(){
 		
-		if (this.state.usaState.length != 0){
+		if (this.state.usaState.cities){
 			
 			var cities = this.state.usaState.cities.map(function(city, index){
 	          return <li className='group state-cities' key={index}>{city.name}</li>;
 			});	
 			if (this.state.usaState.topCityOne){
-
-			var link = "/states/" + this.state.usaState.id + "/cities/1";
-			var topCityOne =<li className="top-city"><Link className="top-city-link" to={link}>{this.state.usaState.topCityOne.name}</Link><span className="top-city-rating">{this.state.usaState.topCityOne.avgs.overall}</span></li>;
-			var topCityTwo = <li className="top-city"><Link className="top-city-link" to="/">{this.state.usaState.topCityTwo.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
-			var topCityThree = <li className="top-city"><Link className="top-city-link" to="/">{this.state.usaState.topCityThree.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
+             
+			var link = "/states/" + this.state.usaState.id + "/cities/";
+			var topCityOne =<li className="top-city"><Link className="top-city-link" to={"/states/" + this.state.usaState.id + "/cities/" + this.state.usaState.topCityOne.id}>{this.state.usaState.topCityOne.name}</Link><span className="top-city-rating">{this.state.usaState.topCityOne.avgs.overall}</span></li>;
+			var topCityTwo = <li className="top-city"><Link className="top-city-link" to={"/states/" + this.state.usaState.id + "/cities/" + this.state.usaState.topCityTwo.id}>{this.state.usaState.topCityTwo.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
+			var topCityThree = <li className="top-city"><Link className="top-city-link" to={"/states/" + this.state.usaState.id + "/cities/" + this.state.usaState.topCityThree.id}>{this.state.usaState.topCityThree.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
 			}
 				
 			if (this.props.params.cityId){

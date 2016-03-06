@@ -52,6 +52,12 @@ li {
   height: 40px;
   
 }
+#city-icon {
+  position: relative;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+}
 
 
 .login-background {
@@ -77,6 +83,10 @@ li {
 	border-radius: 10px;
 	width: 300px;
 	}
+
+canvas {
+  transition: 4s;
+}
 	
 html {
 	background-image: url('clouds-background.png');
@@ -85,6 +95,10 @@ html {
 	background-position: fixed;
 
 	
+}
+#hey area:hover {
+
+  fill: false;
 }
 
  
@@ -122,6 +136,7 @@ input[type="submit"] {
 }
 
 .header {	
+  z-index: 123;
   position: fixed;
   height: 70px;
   border-radius: 4px;
@@ -217,6 +232,7 @@ input[type="submit"] {
   margin: 15px;
   padding: 20px;
   background-color: rgba(242, 242, 242, .7);
+  border: 1px solid grey;
 }
 
 .city-detail h1 {
@@ -431,6 +447,7 @@ input[type=range]:focus::-ms-fill-upper {
 .city-search-item li {
   margin-bottom: 3px;
   margin-top: 3px;
+  background-color: white;
 }
 
 .city-search:focus ~ .city-search-item {
@@ -478,9 +495,14 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .search-more-cities {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 23px;
 }
- .state-component {
+.search-more-cities button {
+  top: 5px;
+}
+
+
+.state-component {
   
   position: relative;
   width: 100%;
@@ -510,6 +532,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 20px;
 	text-align: center;
 	background-color: rgba(242, 242, 242, .7);
+  border: 1px solid grey;
 }
 .state-name {
   font-size: 40px;
@@ -544,12 +567,20 @@ input[type=range]:focus::-ms-fill-upper {
 .top-city-link {
   display: block;
   float: left;
+  transition: .5s;
+}
+.top-city-link:hover {
+  color:  #14c9ff;
+  transition: .2s;
+  font-size: 24px;
 }
 .top-city-rating {
   display: block;
   float: right;
   padding: 5px;
   background-color: #f5f5ee;
+  width: 45px;
+  text-align: center;
 }
 .top-city-rating:hover {
   background-color: #14c9ff; 
@@ -636,11 +667,13 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: rgba(242, 242, 242, .7);
   position: relative;
   display: inline-block;
+  background-color: transparent;
   bottom: 8px;
 }
 .input-number-dynamic span{
   float: left;
-  padding-top: 30px;
+  margin-top: 30px;
+  background-color: transparent;
 
 
 }
@@ -648,19 +681,19 @@ input[type=range]:focus::-ms-fill-upper {
   display: inline-block;
   position: relative;
   float: left;
-  
   padding: 10px;
   width: 380px;
-  height: 50px;
+  
   background-color: rgba(242, 242, 242, .7);
 }
-.blurb-input input {
-  padding: 0px;
+.blurb-input textarea {
+  padding: 6px;
   border: 1px solid black;
   background-color: white;
   width: 370px;
   max-height: 70px;
   overflow: scroll;
+  resize: none;
 }
 .modal-submit-button {
   text-align: center;
@@ -725,8 +758,8 @@ input[type=range]:focus::-ms-fill-upper {
   position: fixed;
   margin: 0 auto;
   width: 280px;
-  height: 50%;
-  top: 130px;
+  height: 64%;
+  top: 120px;
   
 
 }
@@ -735,7 +768,19 @@ input[type=range]:focus::-ms-fill-upper {
   position: relative;
   margin: 0 auto;
   width: 100px;
-  height: 100%;
+  height: 248px;
+  background-color: #4d4e4f;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  background-color: rgba(77, 78, 79, .8)
+ 
+}
+.sidebar-nav-with-favs {
+  float: left;
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  height: 382px;
   background-color: #4d4e4f;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -755,30 +800,158 @@ input[type=range]:focus::-ms-fill-upper {
   color: #14c9ff;
   text-shadow: 2px 2px black;
   margin-bottom: 6px;
-  margin-top: 10px;   
+  margin-top: 10px; 
+  transition: .5s;  
 }
-.sidebar a:first-child:hover{
-  color: white;
+.sidebar-blurb {
+  right: 5px;
+  font-size: 17px;
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 67px;
+  text-align: center;
+  padding: 20px;
+  color: #14c9ff;
+  text-shadow: 2px 2px black;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  transition: .5s; 
+
 }
-.sidebar a:nth-child(2):hover{
+.sidebar-favorites {
+  right: 5px;
+  font-size: 17px;
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 67px;
+  text-align: center;
+  padding: 20px;
+  color: #14c9ff;
+  text-shadow: 2px 2px black;
+  margin-top: 10px; 
+  transition: .5s;
+}
+.sidebar-favorites-active {
+  right: 5px;
+  font-size: 17px;
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 67px;
+  text-align: center;
+  padding: 20px;
   color: white;
+  text-shadow: 2px 2px black;
+  background-color: #14c9ff;
+  
+  margin-top: 10px; 
+  
+}
+
+.favorites-tab{
+  z-index: 134;
+  position: absolute;
+  display: block;
+  width: 172px;
+  height: 180px;
+  left: 100px;
+  top: 258px;
+  background-color: #14c9ff; 
+}
+.favorites-city {
+ text-align: left;
+ display: block;
+ color: white;
+ padding: 6px;
+ background-color: rgba(245, 245, 238, .2)
+}
+.favorites-list {
+  width: 90%;
+  height: 90%;
+  margin: 10px;
+  font-weight: 500;
+  background-color: rgba(245, 245, 238, .35)
+}
+
+.sidebar a:hover{
+  color: white;
+  transition: .2s;
+}
+.sidebar-blurb:hover{
+  color: white;
+  cursor: pointer;
+  transition: .2s;
+}
+.sidebar-blurb-active{
+  right: 5px;
+  font-size: 17px;
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 67px;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 2px 2px black;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  background-color: #14c9ff;
+  color: white;
+  cursor: pointer;
+  
+}
+.sidebar-favorites:hover{
+  color: white;
+  cursor: pointer;
+  transition: .2s;
 }
 .write-blurb-tab{
   z-index: 134;
   position: absolute;
   display: block;
   width: 172px;
-  height: 100px;
+  height: 190px;
   left: 100px;
-  background-color: #14c9ff; 
+  top: 124px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  
+  background-color: #14c9ff
+ 
+}
+.write-blurb-tab p {
+  color: white;
+  margin: 8px;
+  width: 85%;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: rgba(245, 245, 238, .3)
+}
+.write-blurb-tab button{
+  float: left;
+  padding: 6px;
+  background-color: white;
+  margin: 6px;
+  border-radius: 4px;
+  width: 60px;
+  text-align: center;
 }
 .city-search-blurb-container {
   width: 100%;
+  margin: 0 auto;
+  
+  
 }
 .city-search-blurb {
   border: 1px solid black;
+  border-radius: 2px;
   background-color: white;
-  width: 150px;
+  margin: 0 8px;
+  width: 154px;
   height: 28px;
 }
 
@@ -787,11 +960,21 @@ input[type=range]:focus::-ms-fill-upper {
   max-height: 45px;
   overflow: scroll;
   border: 1px solid black;
-  width: 150px;
+  border-top: none;
+  width: 154px;
+  margin: 0 8px;
+  background-color: rgba(245, 245, 238, .6);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
 }
 .city-search-item-blurb li {
+  text-align: center;
+  padding: 2px;
   margin-bottom: 3px;
   margin-top: 3px;
+
+   
 }
 .city-search-blurb:focus ~ .city-search-item-blurb {
   visibility: visible;

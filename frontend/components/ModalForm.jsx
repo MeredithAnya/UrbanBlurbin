@@ -60,7 +60,7 @@ var ModalForm = React.createClass({
                 <label>Nightlife</label>
               </ul>  
                 <section className="rating-inputs">
-	              <input className="rating-traffic-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('traffic')} />
+	              <input className="rating-traffic-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('traffic')}/>
 
 	              <input className="rating-weather-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('weather')}/>
 

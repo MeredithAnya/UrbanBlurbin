@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 
 var NavBar = React.createClass({
 	getInitialState: function(){
@@ -34,7 +35,7 @@ var NavBar = React.createClass({
 		return (
 			<header className="header">	
 	          <nav className="group header-nav">
-	           <h1 className="group header-logo">Urban  Blurbin</h1>
+	           <Link to="/" className="group header-logo">Urban  Blurbin</Link>
 		           <ul className="group header-list">
 		           <li>{signing}</li>
 		           {signup}

@@ -1,7 +1,7 @@
 var Store = require('flux/utils').Store;
 var AppDispatcher = require('../dispatcher/dispatcher');
 
-var _state = [];
+var _state = {};
 
 var StateStore = new Store(AppDispatcher);
 

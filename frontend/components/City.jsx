@@ -15,11 +15,14 @@ var City = React.createClass({
      ApiUtil.fetchCity(id);
 	},
 	_onChange: function(){
+		
 	 var id = parseInt(this.props.params.cityId);
      this.setState({city: CityStore.find(id)});
 	},
 	componentWillReceiveProps: function(newProps){
-      debugger;
+		
+     var id = parseInt(newProps.params.cityId);
+     ApiUtil.fetchCity(id);
 	},
 	componentWillUnmount: function(){
       this.cityToken.remove();

@@ -1,1 +1,1 @@
-json.array! @favorites, :name, :id
+json.array! @favorites, :name, :id, :state_id

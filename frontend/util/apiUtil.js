@@ -1,9 +1,10 @@
 var StateActions = require('../actions/stateActions');
 var CityActions = require('../actions/cityActions');
+var FavoriteActions = require('../actions/FavoriteActions');
 
 var ApiUtil = {
   fetchState: function(id){
-
+   
   	$.ajax({
       url: 'api/states/' + id,
       type: 'GET',
@@ -50,11 +51,11 @@ var ApiUtil = {
   },
   fetchUserFavorites: function(username){
     $.ajax({
-      url: 'api/favorites' + username,
+      url: 'api/favorites/' + username,
       type: 'GET',
       dataType: 'json',
       success:(function(favorites){
-        debugger;
+        FavoriteActions.receiveFavorites(favorites);
       })
 
     });
