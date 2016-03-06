@@ -1,6 +1,6 @@
 var React = require('react');
 var SearchAllCities = require('./SearchAllCities');
-var BlurbCityStore = require('../stores/BlurbCityStore');
+var BlurbCityStore = require('../stores/blurbCityStore');
 var ApiUtil = require('../util/apiUtil');
 var ModalForm = require('./ModalForm');
 
