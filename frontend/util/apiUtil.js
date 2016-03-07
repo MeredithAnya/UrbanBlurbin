@@ -22,7 +22,6 @@ var ApiUtil = {
       type: 'GET',
       dataType: 'json',
       success:(function(city){
-        
         CityActions.receiveCity(city);
       })
     });
