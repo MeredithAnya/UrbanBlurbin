@@ -9,7 +9,7 @@ var SideBar = React.createClass({
             favoriteOpen: false};
   },
   openBlurb: function(){
-   this.setState({blurbOpen: true});
+   this.state.blurbOpen ? this.setState({blurbOpen: false}) : this.setState({blurbOpen: true});
    this.setState({favoriteOpen: false});
   },
   closeBlurb: function(){

@@ -80,7 +80,7 @@ var ApiUtil = {
       dataType: 'json',
       data: favorite,
       success:(function(favorites){
-        debugger;
+        
         FavoriteActions.receiveFavorites(favorites);
       })
 

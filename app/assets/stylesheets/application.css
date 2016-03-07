@@ -748,6 +748,15 @@ input[type=range]:focus::-ms-fill-upper {
 .search-more-cities button {
   top: 5px;
 }
+.search-more-cities .city-search-item {
+  position: relative;
+  visibility: hidden;
+  max-height: 45px;
+  overflow: scroll;
+  border: 1px solid black;
+  width: 170px;
+  left: 4px;
+}
 
 
 .state-component {
@@ -1018,7 +1027,6 @@ input[type=range]:focus::-ms-fill-upper {
   float: left;
   position: fixed;
   margin: 0 auto;
-  width: 280px;
   height: 64%;
   top: 120px;
   
