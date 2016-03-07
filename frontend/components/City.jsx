@@ -13,7 +13,9 @@ var City = React.createClass({
 	componentDidMount: function(){
 
      var id = parseInt(this.props.params.cityId);
+     this.favoriteToken = FavoriteStore.addListener(this.changeFavs);
 	 this.cityToken = CityStore.addListener(this._onChange);
+	 ApiUtil.fetchUserFavorites(window.current_user);
      ApiUtil.fetchCity(id);
 
 	},
@@ -22,29 +24,43 @@ var City = React.createClass({
 	 var id = parseInt(this.props.params.cityId);
      this.setState({city: CityStore.find(id)});
 	},
+	changeFavs: function(){
+      this.setState({favorites: FavoriteStore.all()});
+	},
 	componentWillReceiveProps: function(newProps){
 		
      var id = parseInt(newProps.params.cityId);
      ApiUtil.fetchCity(id);
 	},
 	componentWillUnmount: function(){
+	  this.favoriteToken.remove();
       this.cityToken.remove();
 	},
 	favoriteCity: function(){
-
 		var favorite = { favorite: {
 
 			username: window.current_user,
 			city_id: this.state.city.id
 		  }
 		}
+		this.cityFavorited() ? ApiUtil.unfavoriteCity(favorite) : ApiUtil.favoriteCity(favorite);
 		
-		ApiUtil.favoriteCity(favorite);
 		
 	},
+	cityFavorited: function(){
+		var favorited = false;
+		var that = this;
+		this.state.favorites.forEach(function(city){
+			if (city.id == that.state.city.id){
+               favorited = true;
+			} 
+
+		});
+		return favorited;
+	},
 	render: function(){
-        debugger;
-		
+       
+		var heartId = this.cityFavorited() ? "heart-icon-black" : "heart-icon-red";
 		if (this.state.city){
 			if (this.state.city.blurbs){
 				var blurbs = [];
@@ -66,7 +82,7 @@ var City = React.createClass({
 			  <section className="city-name-title">
 			  <span className="city-name">{cityName}</span>
 			  <span  style={{float: 'right', fontSize: '22px', }} className="overall-score"> Overall {overall}</span>
-			  <button onClick={this.favoriteCity}><img id="heart-icon-red" src="./assets/heart-icon.png"></img></button>
+			  <button onClick={this.favoriteCity}><img id={heartId} alt={"favorite" + cityName} src="./assets/heart-icon.png"></img></button>
 			  </section>
 			  <Averages avgs={averages}/>
 			  <div className="city-blurbs">

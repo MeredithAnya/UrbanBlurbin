@@ -4,10 +4,14 @@ var NavBar = require('./NavBar');
 
 
 var App = React.createClass({
+	
+	contextTypes: {
+     router: React.PropTypes.object.isRequired
+    },
 	render: function(){
 		return(
           <div className="app"> 
-           <NavBar/>
+          <NavBar/>
            {this.props.children}
           </div>
 		);

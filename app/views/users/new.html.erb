@@ -1,21 +1,24 @@
+<div class="signup">
 <h2>Sign Up</h2>
 <% if flash[:errors] %>
+<p> Uh Oh! </p>
 <% flash[:errors].each do |error| %>
-<%= error %>
+<p><%= error %></p>
 <% end %>
 <% end %>
 
-<form action="<%= users_url %>" method="post">
+<form class="signup-form" action="<%= users_url %>" method="post">
   <%= auth_token_input %>
-  <label>
+  <label class="signup-label">
     Username
-    <input type="text" name="user[username]" value="<%= @user.username %>">
+    <input class="signup-input" type="text" name="user[username]" value="<%= @user.username %>">
   </label>
 
-  <label>
+  <label class="signup-label">
     Password
-    <input type="password" name="user[password]" value="<%= @user.password %>">
+    <input class="signup-input" type="password" name="user[password]" value="<%= @user.password %>">
   </label>
 
-  <input type="submit" value="Sign Up">
+  <input class="signup-submit" type="submit" value="Sign Up">
 </form>
+</div>

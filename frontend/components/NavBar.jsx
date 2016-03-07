@@ -23,7 +23,7 @@ var NavBar = React.createClass({
 		var signing ;
 		if (window.current_user === undefined){
           signing = <a href="/session/new">Sign In</a>;
-          var signup = <a href="/user/new">Sign Up</a>;
+          var signup = <a href="/users/new">Sign Up</a>;
           
                     
 		} else {
@@ -35,7 +35,7 @@ var NavBar = React.createClass({
 		return (
 			<header className="header">	
 	          <nav className="group header-nav">
-	           <Link to="/" className="group header-logo">Urban  Blurbin</Link>
+	           <Link to="/" className="group header-logo"><span>Urban</span><span>Blurbin</span></Link>
 		           <ul className="group header-list">
 		           <li>{signing}</li>
 		           {signup}

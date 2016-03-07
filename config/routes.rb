@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :blurbs, only: [:create]
     get 'favorites/:username', to: 'favorites#show'
     post 'favorites', to: 'favorites#create'
+    delete 'favorites', to: 'favorites#destroy'
   end
 
   

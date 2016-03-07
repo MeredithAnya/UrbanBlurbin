@@ -21,4 +21,10 @@ class Favorite < ActiveRecord::Base
     	end	
     end
     
+    def self.findByCreds(cityId, userId)
+    	fav = self.find_by(city_id: cityId, user_id: userId)
+    	return fav if fav 
+    	nil
+
+    end
 end

@@ -35,7 +35,7 @@ ul {
   list-style: none;
 }
 li {
-	list-style: none;
+	list-style: none; 
 }
 
 #states-icon {
@@ -59,7 +59,7 @@ li {
   height: 40px;
 }
 
-#heart-icon-red {
+#heart-icon-black {
   position: absolute;
   left: 0;
   right: 0;
@@ -70,15 +70,206 @@ li {
   padding: 4px;
   margin-top: 4px;
   background-color: white;
+
 }
-#heart-icon-red:hover {
+#heart-icon-black:hover {
   width: 28px;
   height: 28px;
   border-radius: 7px;
   color: black;
   padding: 4px;
-  background-color: pink;
+  background-color: grey;
+  opacity: .3;
+  transition: .12s;
 }
+
+#heart-icon-red {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  padding: 4px;
+  margin-top: 4px;
+  background-color: grey;
+  opacity: .3;
+  
+}
+#heart-icon-red:hover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  padding: 4px;
+  margin-top: 4px;
+  background-color: white;
+  opacity: 1;
+  
+}
+
+.signin {
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  background-color: rgba(242, 242, 242, .4);
+  
+}
+.signin h2 {
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  border-bottom: 3px solid lightblue;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  background-color: rgba(242, 242, 242, .2);
+}
+
+.signin p {
+  text-align: center;
+  color: red;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+
+.signin-form {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+.signin-label {
+ position: relative;
+  margin: 40 auto;
+  width: 400px;
+  height: 50px;
+  padding: 20px;
+  font-size: 36px;
+  
+
+}
+
+.signin-input {
+  border-radius: 4px;
+  width: 180px;
+  height: 8px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  margin-left: 10px;
+  color: #444444;
+  background-color: rgba(242, 242, 242, .5);
+
+}
+.signin-submit {
+  border-radius: 4px;
+  width: 180px;
+  height: 30px;
+  padding: 10px;
+  padding-bottom: 15px;
+  font-size: 32px;
+  text-align: center;
+  color: black;
+  background-color: rgba(242, 242, 242, .5);
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  
+}
+.signin-submit:hover {
+border: 1px solid white;
+
+}
+
+
+.signup {
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 6px;
+  background-color: rgba(242, 242, 242, .4);
+  
+}
+.signup h2 {
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  border-bottom: 3px solid lightblue;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  background-color: rgba(242, 242, 242, .2);
+}
+
+.signup p {
+  text-align: center;
+  color: red;
+  
+  font-size: 18px;
+}
+
+
+.signup-form {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+.signup-label {
+ position: relative;
+  margin: 40 auto;
+  width: 400px;
+  height: 50px;
+  padding: 20px;
+  font-size: 36px;
+  
+
+}
+
+.signup-input {
+  border-radius: 4px;
+  width: 180px;
+  height: 8px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  margin-left: 10px;
+  color: #444444;
+  background-color: rgba(242, 242, 242, .5);
+
+}
+.signup-submit {
+  border-radius: 4px;
+  width: 180px;
+  height: 30px;
+  padding: 10px;
+  padding-bottom: 15px;
+  font-size: 32px;
+  text-align: center;
+  color: black;
+  background-color: rgba(242, 242, 242, .5);
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  
+}
+.signup-submit:hover {
+border: 1px solid white;
+
+}
+
+
 
 
 
@@ -92,6 +283,7 @@ li {
   padding: 0px;
 
 }
+
 .header-text {
 	position: absolute;
 	text-align: center;
@@ -104,26 +296,21 @@ li {
 	padding: 2px;
 	border-radius: 10px;
 	width: 300px;
+  font-family: 'Roboto Slab', serif;
 	}
 
 canvas {
   transition: 4s;
 }
 	
-html {
-	background-image: url('clouds-background.png');
+body {
+	background-image: url('bright-city.png');
 	background-color: transparent;
 	background-size: 100%;
-	background-position: fixed;
+	background-attachment: fixed;
 
 	
 }
-#hey area:hover {
-
-  fill: false;
-}
-
- 
 
 input[type="password"],
 input[type="email"],
@@ -160,31 +347,47 @@ input[type="submit"] {
 .header {	
   z-index: 123;
   position: fixed;
-  height: 70px;
+  height: 80px;
   border-radius: 4px;
   width: 100%;
   margin: 0 auto;
-  background-color: #4d4e4f;
+  color: rgba(77, 78, 79, 1);
+  background-color: rgba(77, 78, 79, 1);
   
 }
 
 .header-logo {
   position: relative;
   float: left;
-  top: 14px;
-  left: 20px;
-  padding: 5px;
-  height: 30px;
-  width: 156px;
+  top: 18px;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  padding-right: 8px;
+  height: 20px;
+  width: 270px;
   font-style: bold;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
   
-  font-size: 25px;
-  font-weight: 400px;
   color: #4d4e4f;
-  background: linear-gradient(90deg, #14c9ff 50%, #b4d235 50%);
+  /*text-shadow: 1px 1px 1px black;*/
   opacity: 1;
   text-align: center;
 }
+.header-logo span:first-child {
+  font-family: 'Roboto Slab', serif;
+  padding: 6px;
+  padding-left: 10px;
+  background-color: #14c9ff ;
+}
+.header-logo span:last-child {
+  
+  background-color: #b4d235;
+  font-family: 'Roboto Slab', serif;
+  padding: 6px;
+  padding-left: 10px;
+}
+
 
 .header-nav {
   position: relative;
@@ -197,15 +400,15 @@ input[type="submit"] {
 	position: relative;
 	float: right;
 	top: 20px;
-	padding: 5px;
+	padding: 10px;
 	font-size: 19px;
-	right: 50px;
+	right: 30px;
 	height: 25px;
 	width: 100px;
-	border: 2px solid black;
 	color: #14c9ff;
 	text-align: center;
-	background-color: black;
+  font-family: 'Noto Serif', serif;
+	background-color: #1d1d1d;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
@@ -214,14 +417,15 @@ input[type="submit"] {
 	position: relative;
 	float: right;
 	top: 20px;
-	padding: 5px;
+	padding: 10px;
 	margin-left: 5px;
 	font-size: 19px;
-	right: 50px;
+	right: 30px;
 	height: 25px;
 	width: 100px;
 	border: 2px solid black;
 	color: #14c9ff;
+  font-family: 'Noto Serif', serif;
 	text-align: center;
 	background-color: black;
 	border-radius: 5px;
@@ -231,18 +435,21 @@ input[type="submit"] {
 	position: relative;
 	float: right;
 	top: 20px;
-	padding: 5px;
+	padding: 10px;
 	font-size: 19px;
-	right: 50px;
+	right: 30px;
 	height: 25px;
 	width: auto;
-	border: 2px solid black;
 	color: #14c9ff;
 	text-align: center;
 	background-color: black;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	text-transform: capitalize;
+
+}
+.welcome span {
+  font-family: 'Roboto Slab', serif;
 }
 
 .city-detail{
@@ -551,12 +758,14 @@ input[type=range]:focus::-ms-fill-upper {
 .usa-state {
   z-index: -3;
   float: right;
-  position: relative;
+  position: absolute;
+  left: 80px;
+  right: 0;
   display: block;
-  margin: 0px;
+  margin: 0 auto;
   width: 1050px;
   height: 600px;
-  top: 100px;
+  top: 95px;
   border-radius: 4px;
 
 }
@@ -744,6 +953,7 @@ input[type=range]:focus::-ms-fill-upper {
    padding: 10px;
    float: right;
    margin: 3px;
+
    background-color: #b4d235;
 }
 .modal-submit-button:hover {
@@ -769,15 +979,25 @@ input[type=range]:focus::-ms-fill-upper {
   display: inline-block;
   position: relative;
   float: right;
+  margin-left: 15px;
+  border-radius: 10px;
+  width:180px;
+  height: 190px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  background-image: url('blue-cloud.png');
+  background-size: 180px 180px;
  
 }
 .cloud-modal {
-  background-color: #14c9ff;
-  margin: 20px;
+  
+  margin: 10px;
   border-radius: 10px;
   width:110px;
   height: 110px;
-  color: white;
+  transform: translateX(0%) translateY(34%);
+  color: lightblue;
   text-align: center;
   font-size: 16px;
   
@@ -790,8 +1010,8 @@ input[type=range]:focus::-ms-fill-upper {
   height: 90px;
   transform: translateX(100%);
 }
-#modal:hover .bird-icon {
- visibility: visible;
+.cloud-modal:hover {
+ color: white;
 }
 
 .sidebar-header {
@@ -811,6 +1031,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 100px;
   height: 248px;
   background-color: #4d4e4f;
+
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   background-color: rgba(77, 78, 79, .8)
@@ -923,6 +1144,8 @@ input[type=range]:focus::-ms-fill-upper {
 .favorites-list {
   width: 90%;
   height: 80%;
+  max-height: 152px;
+  overflow: scroll;
   margin: 10px;
   font-weight: 500;
   background-color: rgba(245, 245, 238, .35)

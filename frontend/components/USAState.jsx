@@ -21,7 +21,6 @@ var USAState = React.createClass({
 	},
 
 	componentDidMount: function(){
-     
 	 var id = parseInt(this.props.params.stateId);
 	 this.stateToken = StateStore.addListener(this._onChange);
      ApiUtil.fetchState(id);

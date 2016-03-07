@@ -15,6 +15,16 @@ class Api::FavoritesController < ApplicationController
 		render :show
 	end
 
+	def destroy
+		user = User.findByUsername(params[:favorite][:username])
+		favorite = Favorite.findByCreds(params[:favorite][:city_id], user.id)
+	    favorite.destroy!
+		@favorites = user.favorite_cities
+		render :show
+
+	end
+
+
 
 	private
 	def favorite_params
