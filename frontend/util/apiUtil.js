@@ -29,7 +29,7 @@ var ApiUtil = {
   },
   fetchBlurbCities: function(){
     $.ajax({
-      url: 'api/cities/',
+      url: 'api/cities',
       type: 'GET',
       dataType: 'json',
       success:(function(cities){
