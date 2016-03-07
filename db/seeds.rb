@@ -1148,105 +1148,105 @@ City.create!(name: "Dallas", state_id: 43)
 end
 City.create!(name: "Housten", state_id: 43)
 10.times do 
-	Blurb.create!(city_id: 208, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 209, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 #UTAH CITIES
 City.create!(name: "Salt Lake City", state_id: 44)
 10.times do 
-	Blurb.create!(city_id: 209, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 210, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Provo", state_id: 44)
 10.times do 
-	Blurb.create!(city_id: 210, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 211, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "St. George", state_id: 44)
 10.times do 
-	Blurb.create!(city_id: 211, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 212, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 #VERMONT CITIES
 City.create!(name: "Montpelier", state_id: 45)
 10.times do 
-	Blurb.create!(city_id: 212, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 213, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Stowe", state_id: 45)
 10.times do 
-	Blurb.create!(city_id: 213, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 214, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Burlington", state_id: 45)
 10.times do 
-	Blurb.create!(city_id: 214, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 215, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 #VIRGINIA CITIES
 City.create!(name: "Richmond", state_id: 46)
 10.times do 
-	Blurb.create!(city_id: 215, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 216, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Norfolk", state_id: 46)
 10.times do 
-	Blurb.create!(city_id: 216, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 217, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Virginia Beach", state_id: 46)
 10.times do 
-	Blurb.create!(city_id: 217, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 218, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 #WASHINGTON CITIES
 City.create!(name: "Seattle", state_id: 47)
 10.times do 
-	Blurb.create!(city_id: 218, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 219, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Olympia", state_id: 47)
 10.times do 
-	Blurb.create!(city_id: 219, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 220, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Tacoma", state_id: 47)
 10.times do 
-	Blurb.create!(city_id: 220, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 221, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 #WEST VIRGINIA CITIES
 City.create!(name: "Charleston", state_id: 48)
 10.times do 
-	Blurb.create!(city_id: 221, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 222, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Huntington", state_id: 48)
 10.times do 
-	Blurb.create!(city_id: 222, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 223, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Morgantown", state_id: 48)
 10.times do 
-	Blurb.create!(city_id: 223, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 224, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 #WISCONSIN CITIES
 City.create!(name: "Madison", state_id: 49)
 10.times do 
-	Blurb.create!(city_id: 224, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 225, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Milwaukee", state_id: 49)
 10.times do 
-	Blurb.create!(city_id: 225, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 226, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Green Bay", state_id: 49)
 10.times do 
-	Blurb.create!(city_id: 226, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 227, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 #WYOMING CITIES
 City.create!(name: "Cheyenne", state_id: 50)
 10.times do 
-	Blurb.create!(city_id: 227, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 228, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Jackson", state_id: 50)
 10.times do 
-	Blurb.create!(city_id: 228, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 229, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 City.create!(name: "Casper", state_id: 50)
 10.times do 
-	Blurb.create!(city_id: 229, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+	Blurb.create!(city_id: 230, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 
