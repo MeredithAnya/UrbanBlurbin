@@ -44,8 +44,8 @@ var ModalForm = React.createClass({
     }, 
 
     render: function(){
-    	
-
+    	debugger;
+    
    	return (
    		    <Modal
 	          isOpen={this.props.isOpen}

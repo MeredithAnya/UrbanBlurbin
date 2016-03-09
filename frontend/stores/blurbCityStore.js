@@ -13,6 +13,22 @@ BlurbCityStore.all = function(){
   return cities;
 };
 
+BlurbCityStore.findByNamesAndIds = function(cityName, stateId){
+  var foundCity; 
+  
+  Object.keys(_cities).forEach(function(key){
+
+    var city = _cities[key];
+   
+    if ((city.name === cityName) && (city.state.id === stateId)){
+      foundCity = city;
+    }
+  });
+
+
+  return foundCity;
+};
+
 var resetCities = function(cities){
   _cities = {};	
   cities.forEach(function(city){

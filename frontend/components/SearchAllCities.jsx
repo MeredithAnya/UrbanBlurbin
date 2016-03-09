@@ -1,4 +1,5 @@
 var React = require('react');
+var STATE_NAMES = require('../constants/stateNames');
 
 var SearchAllCities = React.createClass({
 	getInitialState: function () {
@@ -6,7 +7,7 @@ var SearchAllCities = React.createClass({
 	},
 
 	handleInput: function (event) {
-
+     
 	  this.setState({ inputVal: event.currentTarget.value });
 	},
 
@@ -15,7 +16,7 @@ var SearchAllCities = React.createClass({
 	    if(this.state.inputVal.length === 0){
 	      var cities = [];
 	      this.props.cities.map(function(city){
-            cities.push(city.name);
+            cities.push([city.name, STATE_NAMES[city.state.id]]);
 	      });
 	      return cities;
 
@@ -24,7 +25,7 @@ var SearchAllCities = React.createClass({
 	    this.props.cities.forEach(function (city) {
 	      var sub = city.name.slice(0, this.state.inputVal.length);
 	      if(sub.toLowerCase() === this.state.inputVal.toLowerCase()){
-	        matches.push(city.name);
+	        matches.push([city.name, STATE_NAMES[city.state.id]]);
 	      }
 	    }.bind(this));
 
@@ -38,31 +39,18 @@ var SearchAllCities = React.createClass({
 	 selectCity: function (event) {
 	  	event.preventDefault();
 	    var city = event.currentTarget.innerText;
+      
 	    
-	    this.setState({ inputVal: city });
-	  },
-	  handleSearch: function(event){
-           event.preventDefault();
-           
-           var id;
-           var stateId;
-           var name = this.state.inputVal;
-           this.props.cities.forEach(function(city){
-	            if (city.name == name){
-	            	id = city.id;
-	            	stateId = city.state.id;
-	            }
-	       });
-
-          this.props.router.replace({pathname:'/states/' + stateId + "/cities/" + id});
+	    this.setState({ inputVal: city});
 	  },
 
 	  render: function () {
 	  	
 	   if (this.props.cities){	
 	    var results = this.matches().map(function (result, i) {
+	    	var cityAndState = result[0] + ", " + result[1];
 	      return (
-	          <li key={i} onClick={this.selectCity}>{result}</li>
+	          <li key={i}  onClick={this.selectCity}>{cityAndState}</li>
 	      );
 	    }.bind(this));
         }
@@ -70,7 +58,7 @@ var SearchAllCities = React.createClass({
 	    return(
 	      <div className="city-search-blurb-container">
 	        <input className="city-search-blurb" onChange={this.handleInput} value={this.state.inputVal} />
-	        <ul className="city-search-item-blurb">
+	        <ul className="city-search-item-blurb" onClick={this.props.selectedCity} >
 	          {results}
 	        </ul>
 	      </div>
