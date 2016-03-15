@@ -317,7 +317,7 @@ canvas {
 body {
 	background-image: url('bright-city.png');
 	background-color: transparent;
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 
 	
@@ -420,8 +420,7 @@ input[type="submit"] {
 	text-align: center;
   font-family: 'Noto Serif', serif;
 	background-color: #1d1d1d;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-radius: 5px;
 }
 
 .header-list a{
@@ -453,7 +452,7 @@ input[type="submit"] {
 	width: auto;
 	color: #14c9ff;
 	text-align: center;
-	background-color: black;
+	background-color: transparent;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	text-transform: capitalize;
@@ -770,6 +769,19 @@ input[type=range]:focus::-ms-fill-upper {
   left: 4px;
 }
 
+.search-more-cities .city-search-item li {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  background-color: white;
+}
+
+.search-more-cities .city-search:focus ~ .city-search-item {
+  visibility: visible;
+  /*background-color: blue;*/
+}
+.search-more-cities .city-search-item:hover {
+  visibility: visible;
+}
 
 .state-component {
   

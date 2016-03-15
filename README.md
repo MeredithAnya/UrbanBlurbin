@@ -1,10 +1,16 @@
 # UrbanBlurbin
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
+[Link Here][heroku] **NB:** This should be a link to your production site
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://www.urbanblurblin.com
 
 ## Minimum Viable Product
+![alt text][screenshot]
+  
+  
+  
+  
+[screenshot]: ./assets/images/UrbanBlurbinScreenshot.png
 
 UrbanBlurbin is a web application inspired by RateMyProfessors built using Ruby on Rails
 and React.js. UrbanBlurbin allows users to:
@@ -12,11 +18,14 @@ and React.js. UrbanBlurbin allows users to:
 <!-- This is a Markdown checklist. Use it to keep track of your
 progress. Put an x between the brackets for a checkmark: [x] -->
 
-- [ ] Create an account
-- [ ] Log in / Log out
-- [ ] Search blurbs by cities
-- [ ] Write and edit their own blurbs
-- [ ] See top rated cities within a state
+* Create an account
+* Log in / Log out
+* Search by state using clickable US map
+* View top overall rated cities for the currently viewed state
+* Search by cities within the currently viewed state
+* Write a blurb about the currently viewed city or search all cities
+* Favorite or unfavorite cities if user is logged in
+
 
 
 ## Design Docs

@@ -56,7 +56,7 @@ var USAState = React.createClass({
 			var link = "/states/" + this.state.usaState.id + "/cities/";
 			var topCityOne =<li className="top-city"><Link className="top-city-link" to={"/states/" + this.state.usaState.id + "/cities/" + this.state.usaState.topCityOne.id}>{this.state.usaState.topCityOne.name}</Link><span className="top-city-rating">{this.state.usaState.topCityOne.avgs.overall}</span></li>;
 			var topCityTwo = <li className="top-city"><Link className="top-city-link" to={"/states/" + this.state.usaState.id + "/cities/" + this.state.usaState.topCityTwo.id}>{this.state.usaState.topCityTwo.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
-			var topCityThree = <li className="top-city"><Link className="top-city-link" to={"/states/" + this.state.usaState.id + "/cities/" + this.state.usaState.topCityThree.id}>{this.state.usaState.topCityThree.name}</Link><span className="top-city-rating">{this.state.usaState.topCityTwo.avgs.overall}</span></li>;
+			var topCityThree = <li className="top-city"><Link className="top-city-link" to={"/states/" + this.state.usaState.id + "/cities/" + this.state.usaState.topCityThree.id}>{this.state.usaState.topCityThree.name}</Link><span className="top-city-rating">{this.state.usaState.topCityThree.avgs.overall}</span></li>;
 			}
 				
 			if (this.props.params.cityId){

@@ -7,6 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #USER
 User.create!(username: 'meredith', password: 'meredith')
+User.create!(username: 'demoUser', password: 'password')
+
+Favorite.create!(user_id: 2, city_id: 52)
+Favorite.create!(user_id: 2, city_id: 64)
 
 # ALL STATES
 
@@ -92,6 +96,7 @@ City.create!(name: "Juneau", state_id: 2)
 10.times do 
 	Blurb.create!(city_id: 5, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
+
 
 #ARIZONA CITIES
 City.create!(name: "Phoenix", state_id: 3)
@@ -1247,6 +1252,19 @@ end
 City.create!(name: "Casper", state_id: 50)
 10.times do 
 	Blurb.create!(city_id: 230, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+end
+#FORGOTTEN ALASKA CITY
+City.create!(name: "Fairbanks", state_id: 2)
+
+10.times do 
+	Blurb.create!(city_id: 231, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
+end
+
+#FORGOTTEN ARKANSAS CITY
+City.create!(name: "Marked Tree", state_id: 4)
+
+10.times do 
+	Blurb.create!(city_id: 232, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
 
 

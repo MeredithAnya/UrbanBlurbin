@@ -35,7 +35,7 @@ class City < ActiveRecord::Base
 
         overall = ((traffic_avg + weather_avg + food_avg + nightlife_avg) / 4).round(2)
         
-        return {traffic: traffic_avg.round(1), weather: weather_avg.round(1), food: food_avg.round(1), nightlife: nightlife_avg.round(1), overall: overall}
+        return {traffic: traffic_avg.round(2), weather: weather_avg.round(2), food: food_avg.round(2), nightlife: nightlife_avg.round(2), overall: overall}
 
     end
 
