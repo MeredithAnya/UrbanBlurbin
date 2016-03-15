@@ -10,7 +10,7 @@
   
   
   
-[screenshot]: ./assets/images/UrbanBlurbinScreenshot.png
+[screenshot]: ./app/assets/images/UrbanBlurbinScreenshot.png
 
 UrbanBlurbin is a web application inspired by RateMyProfessors built using Ruby on Rails
 and React.js. UrbanBlurbin allows users to:
