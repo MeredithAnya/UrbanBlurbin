@@ -1,6 +1,6 @@
 # UrbanBlurbin
 
-[Link Here][heroku] **NB:** This should be a link to your production site
+[Link][heroku] to live version
 
 [heroku]: http://www.urbanblurblin.com
 
@@ -27,6 +27,17 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 * Favorite or unfavorite cities if user is logged in
 
 
+##Technologies
+
+* Rails
+* React.js
+* Flux
+* Maphilight.js
+* BCrypt
+* JBuilder
+* New Relic RPM
+
+##
 
 ## Design Docs
 * [View Wireframes][views]

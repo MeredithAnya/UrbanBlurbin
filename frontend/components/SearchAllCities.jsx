@@ -13,30 +13,34 @@ var SearchAllCities = React.createClass({
 
 	matches: function () {
 	    var matches = [];
+
 	    if(this.state.inputVal.length === 0){
+
 	      var cities = [];
 	      this.props.cities.map(function(city){
-            cities.push([city.name, STATE_NAMES[city.state.id]]);
+	        cities.push([city.name, STATE_NAMES[city.state.id]]);
 	      });
+
 	      return cities;
 
 	    }
 
 	    this.props.cities.forEach(function (city) {
 	      var sub = city.name.slice(0, this.state.inputVal.length);
+
 	      if(sub.toLowerCase() === this.state.inputVal.toLowerCase()){
 	        matches.push([city.name, STATE_NAMES[city.state.id]]);
 	      }
 	    }.bind(this));
 
 	    if (matches.length === 0) {
-	      matches.push("No matches");
+	      matches.push(["No matches", "sorry!"]);
 	    }
 
 	    return matches;
 	},
 
-	 selectCity: function (event) {
+	selectCity: function (event) {
 	  	event.preventDefault();
 	    var city = event.currentTarget.innerText;
       
@@ -44,7 +48,7 @@ var SearchAllCities = React.createClass({
 	    this.setState({ inputVal: city});
 	  },
 
-	  render: function () {
+	render: function () {
 	  	
 	   if (this.props.cities){	
 	    var results = this.matches().map(function (result, i) {

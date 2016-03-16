@@ -34,10 +34,11 @@ var ModalButton = React.createClass({
     	
     	if (this.state.currentCity){
         	return (<div className="modal-header">
-        					   <button className="cloud-modal" onClick={this.openModal}>Have something to say about {this.state.currentCity.name} ?</button>
+        					   <button className="modal-button" onClick={this.openModal}>Have something to say about {this.state.currentCity.name} ?</button>
 			     	<ModalForm isOpen={this.state.modalIsOpen}
 			     	           onRequestClose={this.closeModal}
-			     	           cityId={this.state.currentCity.id}/>
+			     	           cityId={this.state.currentCity.id}
+                       cityName={this.state.currentCity.name}/>
 			     	           </div>
 			     	);	
     	}

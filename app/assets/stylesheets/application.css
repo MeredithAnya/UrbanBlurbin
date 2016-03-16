@@ -466,7 +466,7 @@ input[type="submit"] {
   position: relative;
   float: left;
   left: 40px;
-  width: 400px;
+  width: 650px;
   height: 500px;
   margin: 15px;
   padding: 20px;
@@ -555,10 +555,15 @@ input[type=range]:focus::-ms-fill-upper {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
+.city-blurbs {
+  width: 100%;
+  height: 100%;
+}
+
 .blurb-header {
   width: 100%;
   margin: 0 auto;
-  height: 300px;
+  height: 305px;
   overflow: scroll;
 }
 
@@ -572,6 +577,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding-left: 10px;
   float: left;
   font-size: 18px;
+  
 }
 .blurb-item {
   position: relative;
@@ -580,6 +586,10 @@ input[type=range]:focus::-ms-fill-upper {
   float: left;
   padding: 2px;
   background-color: #f5f5ee;
+  border-bottom: 2px solid #d2d2c1;
+}
+.blurb-item:first-child{
+  border-top: 2px solid #d2d2c1;
 }
 .rating-title {
   position: relative;
@@ -611,22 +621,25 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .blurb-text {
-  float: right;
+  float: left;
   position: relative;
-  width: 60%;
+  width: 70%;
   display: inline-block;
   text-align: left;
   overflow: scroll;
+  margin: 10px;
+  padding: 10px;
   max-height: 140px;
   background-color: #f5f5ee;
   color: #505050;
+ /* border: 1px solid black;*/
 }
 
 .city-averages {
 
   background-color: #f5f5ee;
   border: 1px solid #d2d2c1;
-  width: 100%;
+  width: 70%;
   height: 120px;
 }
 .city-averages li {
@@ -648,7 +661,6 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .city-name-title {
   position: relative;
-  
   width: 100%;
   height: 35px;
   font-size: 35px;
@@ -661,8 +673,9 @@ input[type=range]:focus::-ms-fill-upper {
   -webkit-text-fill-color: transparent;*/
 }
 .overall-score {
-  line-height: 46px;
-   text-align: right;
+
+   /*line-height: 46px;*/
+   /*text-align: right;*/
    float: right;
    padding: 5px;
    top: 10px;
@@ -671,6 +684,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .usa-city {
   position: relative;
+  width: 100%;
  
 }
 .usa-city button{
@@ -792,11 +806,11 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: -3;
   float: right;
   position: absolute;
-  left: 80px;
+  left: 40px;
   right: 0;
   display: block;
   margin: 0 auto;
-  width: 1050px;
+  width: 1100px;
   height: 600px;
   top: 95px;
   border-radius: 4px;
@@ -1009,42 +1023,41 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .modal-header {
+  z-index: 134;
   display: inline-block;
   position: relative;
   float: right;
-  margin-left: 15px;
-  border-radius: 10px;
-  width:180px;
-  height: 190px;
-  color: white;
+  top: 43px;
+  right: 20px;
+  /*margin-left: 10px;*/
+  border-radius: 5px;
+  width:160px;
+  height: 121px;
+  color: black;
   text-align: center;
   font-size: 16px;
-  background-image: url('blue-cloud.png');
-  background-size: 180px 180px;
+  background-color: #14c9ff;
  
 }
-.cloud-modal {
+.modal-button {
   
-  margin: 10px;
-  border-radius: 10px;
-  width:110px;
-  height: 110px;
-  transform: translateX(0%) translateY(34%);
-  color: lightblue;
+  z-index: 134;
+  border-radius: 5px;
+  width:100%;
+  height: 100%;
+  /*transform: translateX(0%) translateY(34%);*/
+  color: white;
   text-align: center;
-  font-size: 16px;
+  font-size: 22px;
+  float: left;
+  transition: .7s;
   
 }
-.bird-icon {
-  visibility: hidden;
-  z-index: -1;
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  transform: translateX(100%);
-}
-.cloud-modal:hover {
+
+.modal-button:hover {
  color: white;
+ font-size: 24px;
+ transition: .2s;
 }
 
 .sidebar-header {

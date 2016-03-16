@@ -6,7 +6,8 @@ var Blurb = React.createClass({
   	
   	if (this.props.blurbs){
 	  	var blurbItems = this.props.blurbs.map(function(blurb, index){
-	      return <BlurbItem blurb={blurb.blurb} 
+	      return <BlurbItem key={index}
+                          blurb={blurb.blurb} 
 	                        traffic={blurb.traffic} 
 	                        weather={blurb.weather}
 	                        food={blurb.food}

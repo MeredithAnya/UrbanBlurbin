@@ -44,7 +44,7 @@ var ModalForm = React.createClass({
     }, 
 
     render: function(){
-    	debugger;
+    	
     
    	return (
    		    <Modal
@@ -75,7 +75,7 @@ var ModalForm = React.createClass({
                 <span >{this.state.nightlife}</span>
                 </section> 
                <div className="blurb-input">
-	             <label>Here is your chance to personalize your blurb!</label>
+	             <label>Here is your chance to personalize your blurb for {this.props.cityName}!</label>
 	              <textarea defaultValue="Start Blurbing!" valueLink={this.linkState('blurb')}/> 
 	            </div>
 	            <input className="modal-submit-button" type="submit"/>

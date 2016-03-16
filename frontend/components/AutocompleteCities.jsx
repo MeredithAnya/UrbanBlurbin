@@ -9,6 +9,10 @@ var AutocompleteCities = React.createClass({
 
 	  this.setState({ inputVal: event.currentTarget.value });
 	},
+	componentWillReceiveProps: function(){
+  
+      this.setState({inputVal: ""});
+	},
 
 	matches: function () {
 	    var matches = [];
@@ -52,8 +56,8 @@ var AutocompleteCities = React.createClass({
 	            	id = city.id;
 	            }
 	       });
-
           this.props.router.replace({pathname:'/states/' + stateId + "/cities/" + id});
+
 	  },
 
 	  render: function () {

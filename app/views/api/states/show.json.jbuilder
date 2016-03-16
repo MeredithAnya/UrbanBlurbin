@@ -21,8 +21,7 @@ json.extract! @state, :id, :name
 	    json.avgs do 
            json.extract! @averages_three, :traffic, :weather, :food, :nightlife, :overall
          end
-         
-         
+   
     end  
   end   
 

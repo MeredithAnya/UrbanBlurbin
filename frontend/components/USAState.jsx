@@ -91,11 +91,11 @@ var USAState = React.createClass({
 	              </section>
 	              
 	             <div className='group city-detail'>
+                 <ModalButton cityId={this.props.params.cityId} />
 	               {this.props.children}
 	             {searchCities}
 	             </div>
 	             
-                 <ModalButton cityId={this.props.params.cityId} />
                  
 			    
 			       </div>
