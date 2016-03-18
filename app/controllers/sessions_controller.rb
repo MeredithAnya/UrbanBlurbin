@@ -8,8 +8,12 @@ class SessionsController < ApplicationController
       params[:user][:username],
       params[:user][:password]
     )
+    page_info = {cityId: params[:user][:cityId], stateId: params[:user][:stateId]}
 
-    if user
+    if user.id == 1
+      login!(user)
+      render json: page_info
+    elsif user
       login!(user)
       redirect_to root_url
     else

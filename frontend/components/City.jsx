@@ -4,11 +4,13 @@ var ApiUtil = require('../util/apiUtil');
 var Blurb = require('./Blurb');
 var Averages = require('./Averages');
 var FavoriteStore = require('../stores/favoriteStore');
+var ModalFavorites = require('./ModalFavorites');
 
 var City = React.createClass({
 	getInitialState: function(){
 		return {city: {},
-	            favorites: FavoriteStore.all()};
+	            favorites: FavoriteStore.all(),
+	            modalIsOpen: false};
 	},
 	componentDidMount: function(){
 
@@ -28,7 +30,7 @@ var City = React.createClass({
       this.setState({favorites: FavoriteStore.all()});
 	},
 	componentWillReceiveProps: function(newProps){
-		
+		debugger;
      var id = parseInt(newProps.params.cityId);
      ApiUtil.fetchCity(id);
 	},
@@ -36,15 +38,26 @@ var City = React.createClass({
 	  this.favoriteToken.remove();
       this.cityToken.remove();
 	},
-	favoriteCity: function(){
-		var favorite = { favorite: {
+	openModal: function() {
+    	this.setState({modalIsOpen: true});
+    },
 
-			username: window.current_user,
-			city_id: this.state.city.id
-		  }
+	closeModal: function() {
+	    this.setState({modalIsOpen: false});
+	},
+	favoriteCity: function(){
+		if (window.current_user){
+
+			var favorite = { favorite: {
+
+				username: window.current_user,
+				city_id: this.state.city.id
+			  }
+			}
+			this.cityFavorited() ? ApiUtil.unfavoriteCity(favorite) : ApiUtil.favoriteCity(favorite);	
+		} else {
+			this.openModal();
 		}
-		this.cityFavorited() ? ApiUtil.unfavoriteCity(favorite) : ApiUtil.favoriteCity(favorite);
-		
 		
 	},
 	cityFavorited: function(){
@@ -58,7 +71,11 @@ var City = React.createClass({
 		});
 		return favorited;
 	},
+	contextTypes: {
+     router: React.PropTypes.object.isRequired
+    },
 	render: function(){
+
        
 		var heartId = this.cityFavorited() ? "heart-icon-black" : "heart-icon-red";
 		if (this.state.city){
@@ -83,6 +100,11 @@ var City = React.createClass({
 			  <span className="city-name">{cityName}</span>
 			  <span  style={{float: 'right', fontSize: '22px', }} className="overall-score"> Overall {overall}</span>
 			  <button onClick={this.favoriteCity}><img id={heartId} alt={"favorite" + cityName} src="./assets/heart-icon.png"></img></button>
+			  <ModalFavorites isOpen={this.state.modalIsOpen}
+			     	           onRequestClose={this.closeModal}
+			     	           cityId={this.props.params.cityId}
+			     	           stateId={this.props.params.stateId}/>
+			     	           
 			  </section>
 			  <Averages avgs={averages}/>
 			  <div className="city-blurbs">

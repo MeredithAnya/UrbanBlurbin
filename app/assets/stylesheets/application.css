@@ -699,13 +699,15 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .city-search-container {
+  position: relative;
   margin: 0 auto;
-  width: 60%;
+  width: 210px;
 }
 
 .city-search {
+  position: relative;
   border: 1px solid black;
-
+  margin: 0 auto;
   background-color: white;
   width: 170px;
   height: 28px;
@@ -1239,7 +1241,7 @@ input[type=range]:focus::-ms-fill-upper {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   
-  background-color: #14c9ff
+  background-color: #14c9ff;
  
 }
 .write-blurb-tab p {
@@ -1250,16 +1252,25 @@ input[type=range]:focus::-ms-fill-upper {
   font-size: 18px;
   padding: 5px;
   border-radius: 4px;
-  background-color: rgba(245, 245, 238, .3)
+  background-color: rgba(245, 245, 238, .3);
 }
 .write-blurb-tab button{
   float: left;
   padding: 6px;
-  background-color: white;
+  background-color: rgba(245, 245, 238, .5);
   margin: 6px;
   border-radius: 4px;
   width: 60px;
+  color: white;
   text-align: center;
+}
+.write-blurb-tab button:first-of-type:hover {
+  color: #14c9ff;
+  background-color: rgba(245, 245, 238, .9);
+}
+.write-blurb-tab button:nth-of-type(2):hover {
+   color: #14c9ff;
+   background-color: rgba(245, 245, 238, .9);
 }
 .city-search-blurb-container {
   width: 100%;

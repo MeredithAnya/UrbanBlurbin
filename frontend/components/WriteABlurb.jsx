@@ -52,7 +52,8 @@ var WriteABlurb = React.createClass({
   		 <ModalForm isOpen={this.state.modalIsOpen}
 			     	           onRequestClose={this.closeModal}
 			     	           cityId={cityId}
-                       cities={this.state.cities}/>
+                       cities={this.state.cities}
+                       cityName={this.state.finalCity.name}/>
 			     	           
   		 <button onClick={this.props.closeBlurb}>cancel</button>
   		</div>

@@ -85,6 +85,19 @@ var ApiUtil = {
       })
 
     });
+  },
+  loginDemoUser: function(demo){
+    
+    $.ajax({
+      url: 'session',
+      type: 'POST',
+      dataType: 'json',
+      data: demo,
+      success:(function(info){
+       
+        window.location = "#/states/" + info.stateId + "/cities/" + info.cityId;
+      })
+    });
   }
   
 };
