@@ -32,7 +32,7 @@ var ModalFavorites = React.createClass({
 	                     stateId: this.props.stateId}};	
       ApiUtil.loginDemoUser(demo);
       this.props.onRequestClose();
-      
+
 	},
 
 	render: function(){
@@ -44,13 +44,12 @@ var ModalFavorites = React.createClass({
 	          isOpen={this.props.isOpen}
 	          onRequestClose={this.props.onRequestClose}
 	          style={customStyles}>
-	          <button onClick={this.props.onRequestClose}>X</button>
-            
-	          <ul>
+	          <ul className="favorites-modal-list">
+	          <button className="close-button" onClick={this.props.onRequestClose}>X</button>
 	          <li> Oops! </li>
 	          <li>You must be signed in to add a city to your favorites!</li>
 	          <a href="/session/new">Sign In</a>
-	          <button onClick={this.loginDemoUser}>Demo Account</button>
+	          <button className="demo-button" onClick={this.loginDemoUser}>Demo User</button>
 	          </ul>
 	        </Modal>
 	        </div>

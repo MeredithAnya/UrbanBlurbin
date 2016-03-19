@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       params[:user][:username],
       params[:user][:password]
     )
-    page_info = {cityId: params[:user][:cityId], stateId: params[:user][:stateId]}
+    page_info = {cityId: params[:user][:cityId], stateId: params[:user][:stateId], name: user.username}
 
     if user.id == 1
       login!(user)

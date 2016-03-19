@@ -1,4 +1,5 @@
 var React = require('react');
+var ApiUtil = require('../util/apiUtil');
 var Link = require('react-router').Link;
 
 var NavBar = React.createClass({
@@ -7,15 +8,7 @@ var NavBar = React.createClass({
 
 	},
 	signOut: function(){
-		$.ajax({
-			url: '/session',
-			method: 'DELETE',
-			success: function(){
-              window.location = "/";
-			}
-
-		});
-
+		ApiUtil.signOut();
 	},
 
 	render: function(){

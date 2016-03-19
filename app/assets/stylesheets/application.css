@@ -1316,8 +1316,39 @@ input[type=range]:focus::-ms-fill-upper {
   visibility: visible;
 }
 
+/*FAVORITES MODAL*/
+.close-button {
+  width: 340px;
+  text-align: right; 
+}
 
+.favorites-modal-list {
+  background-color: rgba(242, 242, 242, .7);
+  text-align: center;
+  font-size: 22px;
+  width: 350px;
+  height: 250px;
+}
+.favorites-modal-list li:first-of-type {
+  color: red;
+  padding-bottom: 10px;
+}
+.favorites-modal-list li:last-of-type {
+  padding-bottom: 30px;
+}
 
+.favorites-modal-list a {
+  background-color: rgba(245, 245, 238, .9);
+  border: 1px solid grey;
+  padding: 15px;
+  margin-right: 5px;
+}
+.demo-button {
+  background-color: #14c9ff;
+  padding: 15px;
+  border: 1px solid grey;
+  margin-left: 5px;
+}
 
 
 .controls {

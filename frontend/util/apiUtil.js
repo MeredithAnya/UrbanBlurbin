@@ -86,6 +86,17 @@ var ApiUtil = {
 
     });
   },
+  signOut: function(){
+    $.ajax({
+      url: '/session',
+      method: 'DELETE',
+      success: function(){
+           window.location = "/";
+      }
+
+    });
+
+  },
   loginDemoUser: function(demo){
     
     $.ajax({
@@ -94,7 +105,7 @@ var ApiUtil = {
       dataType: 'json',
       data: demo,
       success:(function(info){
-       
+        window.current_user = info.name;
         window.location = "#/states/" + info.stateId + "/cities/" + info.cityId;
       })
     });
