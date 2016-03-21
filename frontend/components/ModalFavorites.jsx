@@ -6,10 +6,10 @@ var ApiUtil = require('../util/apiUtil');
 const customStyles = {
   overlay : {
     position          : 'fixed',
-    top               : 200,
+    top               : 160,
     left              : 450,
     right             : 450,
-    bottom            : 200,
+    bottom            : 160,
     backgroundColor   : 'rgba(255, 255, 255, 0.75)'
   },
   content : {
@@ -26,8 +26,8 @@ const customStyles = {
 var ModalFavorites = React.createClass({
 	mixins: [LinkedStateMixin],
 	loginDemoUser: function(){
-	  var demo = {user: {username: "meredith",
-	                     password: "meredith",
+	  var demo = {user: {username: "demoUser",
+	                     password: "password",
 	                     cityId: this.props.cityId,
 	                     stateId: this.props.stateId}};	
       ApiUtil.loginDemoUser(demo);

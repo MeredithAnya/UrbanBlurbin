@@ -6,7 +6,6 @@ class Api::BlurbsController < ApplicationController
 			@city = @blurb.city
 			@averages = @city.averages
 			render :show
-		else
 		end
 
 		  
@@ -15,6 +14,6 @@ class Api::BlurbsController < ApplicationController
 
 	private
 	def blurb_params
-		params.require(:blurb).permit(:traffic,:weather,:food, :nightlife, :blurb, :city_id)
+		params.require(:blurb).permit(:traffic, :weather, :food, :nightlife, :blurb, :city_id)
 	end
 end

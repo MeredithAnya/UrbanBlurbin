@@ -4,14 +4,11 @@
 
 [heroku]: http://www.urbanblurblin.com
 
-## Minimum Viable Product
 ![alt text][screenshot]
-  
-  
-  
   
 [screenshot]: ./app/assets/images/UrbanBlurbinScreenshot.png
 
+## Minimum Viable Product
 UrbanBlurbin is a web application inspired by RateMyProfessors built using Ruby on Rails
 and React.js. UrbanBlurbin allows users to:
 

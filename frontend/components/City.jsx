@@ -30,7 +30,6 @@ var City = React.createClass({
       this.setState({favorites: FavoriteStore.all()});
 	},
 	componentWillReceiveProps: function(newProps){
-		debugger;
      var id = parseInt(newProps.params.cityId);
      ApiUtil.fetchCity(id);
 	},

@@ -21,17 +21,27 @@ class City < ActiveRecord::Base
 
     def averages
         return {} if self.blurbs.length == 0
+        total_blurbs = self.blurbs.count.to_f
+        
     	traffics = self.blurbs.group(:traffic).count
-    	traffic_avg = (traffics.keys.inject(:+)/traffics.length.to_f)
+        traffic_sum = 0
+    	traffics.each {|key, value| traffic_sum += key * value}
+        traffic_avg = (traffic_sum/total_blurbs)
 
     	weathers = self.blurbs.group(:weather).count
-    	weather_avg = (weathers.keys.inject(:+)/weathers.length.to_f)
+        weather_sum = 0
+        weathers.each {|key, value| weather_sum += key * value}
+    	weather_avg = (weather_sum/total_blurbs)
 
     	foods = self.blurbs.group(:food).count
-    	food_avg = (foods.keys.inject(:+)/foods.length.to_f)
+        food_sum = 0
+        foods.each {|key, value| food_sum += key * value}
+    	food_avg = (food_sum/total_blurbs)
 
     	nightlifes = self.blurbs.group(:nightlife).count
-    	nightlife_avg = (nightlifes.keys.inject(:+)/nightlifes.length.to_f)
+        nightlife_sum = 0
+        nightlifes.each {|key, value| nightlife_sum += key * value}
+    	nightlife_avg = (nightlife_sum/total_blurbs)
 
         overall = ((traffic_avg + weather_avg + food_avg + nightlife_avg) / 4).round(2)
         

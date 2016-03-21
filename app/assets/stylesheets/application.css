@@ -716,6 +716,7 @@ input[type=range]:focus::-ms-fill-upper {
   visibility: hidden;
   max-height: 45px;
   overflow: scroll;
+  text-align: center;
   border: 1px solid black;
   width: 170px;
 }
@@ -773,7 +774,7 @@ input[type=range]:focus::-ms-fill-upper {
   font-size: 23px;
 }
 .search-more-cities button {
-  top: 5px;
+  top: 4px;
 }
 .search-more-cities .city-search-item {
   position: relative;
@@ -1323,7 +1324,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .favorites-modal-list {
-  background-color: rgba(242, 242, 242, .7);
+  background-color: rgba(242, 242, 242, .8);
   text-align: center;
   font-size: 22px;
   width: 350px;
@@ -1338,17 +1339,34 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .favorites-modal-list a {
-  background-color: rgba(245, 245, 238, .9);
+  /*background-color: rgba(245, 245, 238, .9);*/
+  border-radius: 3px;
+  background-color: grey;
   border: 1px solid grey;
   padding: 15px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
+
+.favorites-modal-list a:hover {
+  background-color: black;
+  color: white;
+}
+
 .demo-button {
-  background-color: #14c9ff;
+ /* background-color: white;*/
+  /*color: rgba(20, 201, 255, .9);*/
+  border-radius: 3px;
+  background-color: grey;
   padding: 15px;
   border: 1px solid grey;
-  margin-left: 5px;
+  margin-left: 10px;
+
 }
+.demo-button:hover {
+  background-color: black;
+  color: white;
+}
+
 
 
 .controls {

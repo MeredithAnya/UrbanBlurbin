@@ -26,14 +26,13 @@ var USAState = React.createClass({
      ApiUtil.fetchState(id);
 
 	},
-	componentWillReceiveProps: function(newProps){
-     
+	componentWillReceiveProps: function(newProps){ 
+	    debugger; 
      	var id = parseInt(newProps.params.stateId);
      	ApiUtil.fetchState(id); 	
      
 	},
-	_onChange: function(){
-	 
+	_onChange: function(){ 
      this.setState({usaState: StateStore.all()});
 	},
 	componentWillUnmount: function(){

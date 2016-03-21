@@ -8,10 +8,10 @@ class SessionsController < ApplicationController
       params[:user][:username],
       params[:user][:password]
     )
-    page_info = {cityId: params[:user][:cityId], stateId: params[:user][:stateId], name: user.username}
 
-    if user.id == 1
+    if user.id == 2 && params[:user][:cityId]
       login!(user)
+      page_info = {cityId: params[:user][:cityId], stateId: params[:user][:stateId], name: user.username}
       render json: page_info
     elsif user
       login!(user)
