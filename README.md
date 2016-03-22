@@ -35,11 +35,11 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 * New Relic RPM
 
 ##Blurb Implementation
-When a blurb is written about a city, the blurb controller renders the city's json object with the updated blurbs associations. 
-      ```ruby
-      @city = @blurb.city
-      @averages = @city.averages
-      ```
+When a blurb is written about a city, the blurb controller gets the city 
+```ruby
+@city = @blurb.city
+@averages = @city.averages
+```
 
 ##Future Features 
 -[ ] Users can unfavorite cities from their favorites tab directly
