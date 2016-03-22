@@ -2,7 +2,7 @@
 
 [Link][heroku] to live version
 
-[heroku]: http://www.urbanblurblin.com
+[heroku]: www.urbanblurblin.com
 
 ![alt text][screenshot]
   
@@ -34,9 +34,17 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 * JBuilder
 * New Relic RPM
 
+##Blurb Implementation
+When a blurb is written about a city, the blurb controller renders the city's json object with the updated blurbs associations. 
+      ```ruby
+      @city = @blurb.city
+      @averages = @city.averages
+      ```
+
 ##Future Features 
-* Users have the ability to both save and edit the blurbs they write if they are signed in
-* Upvotes and downvotes on blurbs for whether other users found that blurb helpful or unhelpful, respectively
+-[ ] Users can unfavorite cities from their favorites tab directly
+-[ ] Users have the ability to both save and edit the blurbs they write if they are signed in
+-[ ] Upvotes and downvotes on blurbs for whether other users found that blurb helpful or unhelpful, respectively
 
 
 ## Design Docs

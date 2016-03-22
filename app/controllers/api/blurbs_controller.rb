@@ -7,8 +7,7 @@ class Api::BlurbsController < ApplicationController
 			@averages = @city.averages
 			render :show
 		end
-
-		  
+  
 	end
 
 

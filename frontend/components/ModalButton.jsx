@@ -38,7 +38,8 @@ var ModalButton = React.createClass({
 			     	<ModalForm isOpen={this.state.modalIsOpen}
 			     	           onRequestClose={this.closeModal}
 			     	           cityId={this.state.currentCity.id}
-                       cityName={this.state.currentCity.name}/>
+                       cityName={this.state.currentCity.name}
+                       stateId={this.props.stateId}/>
 			     	           </div>
 			     	);	
     	}

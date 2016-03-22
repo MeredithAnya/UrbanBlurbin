@@ -26,7 +26,7 @@ var ModalForm = React.createClass({
     },
 	submitBlurb: function(e){
 		e.preventDefault();
-
+        var that = this;
 		var blurb = { blurb: {
 
 			traffic: this.state.traffic,
@@ -37,8 +37,9 @@ var ModalForm = React.createClass({
 			city_id: this.props.cityId
 		  }
 		}
-       
+
     	ApiUtil.createBlurb(blurb);
+        ApiUtil.fetchState(that.props.stateId);
     	this.props.onRequestClose();
 
     }, 
@@ -64,7 +65,7 @@ var ModalForm = React.createClass({
 
 	              <input className="rating-weather-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('weather')}/>
 
-                <input className="rating-food-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('food')}/>
+                  <input className="rating-food-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('food')}/>
                  
 	              <input className="rating-nightlife-input" type="range" defaultValue={0} max={5} step={1} valueLink={this.linkState('nightlife')}/>
                 </section>
