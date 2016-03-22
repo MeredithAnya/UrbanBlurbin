@@ -9,6 +9,14 @@ StateStore.all = function(){
 	return _state;
 };
 
+StateStore.getCities = function(){
+   cities = []
+   cities.push(_state.topCityOne);
+   cities.push(_state.topCityTwo);
+   cities.push(_state.topCityThree);
+   return cities;
+};
+
 var resetState = function(state){
   _state = state;
 };
