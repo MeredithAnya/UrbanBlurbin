@@ -1,10 +1,9 @@
-# UrbanBlurbin
-
+![alt text][screenshot]
+# UrbanBlurbin                         								
 [Link][heroku] to live version
 
 [heroku]: www.urbanblurblin.com
 
-![alt text][screenshot]
   
 [screenshot]: ./app/assets/images/UrbanBlurbinScreenshot.png
 [fullscreenshot]:./app/assets/images/fullscreenshot.png
@@ -13,6 +12,7 @@
 UrbanBlurbin is a web application inspired by RateMyProfessors built on Ruby on Rails. UrbanBlurbin has hand-rolled user authentication and is almost exclusively a single page application, using React.js for the frontend technology. 
 
 Users can search by cities in the currently selected state, blurb about they city, and favorite or unfavorite cities if they are currently signed in.
+
 ![alt text][fullscreenshot]
 
 
