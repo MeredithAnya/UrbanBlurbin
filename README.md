@@ -75,14 +75,12 @@ The State component's state updates when a blurb is created in order to acheive 
 * [Flux Stores][stores]
 * [API endpoints][api-endpoints]
 * [DB schema][schema]
-
 [views]: ./docs/views.md
 [components]: ./docs/components.md
 [stores]: ./docs/stores.md
 [api-endpoints]: ./docs/api-endpoints.md
 [schema]: ./docs/schema.md
 
-## Implementation Timeline
 
 
 
