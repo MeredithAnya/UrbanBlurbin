@@ -61,7 +61,7 @@ var SearchAllCities = React.createClass({
 
 	    return(
 	      <div className="city-search-blurb-container">
-	        <input className="city-search-blurb" onChange={this.handleInput} value={this.state.inputVal} />
+	        <input className="city-search-blurb" onChange={this.handleInput} value={this.state.inputVal}/>
 	        <ul className="city-search-item-blurb" onClick={this.props.selectedCity} >
 	          {results}
 	        </ul>
