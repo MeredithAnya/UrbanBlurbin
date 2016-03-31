@@ -398,11 +398,26 @@ City.create!(name: 'San Diego' ,state_id: 5)
 10.times do 
 	Blurb.create!(city_id: 63, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
+
+
+
 City.create!(name: 'San Francisco' ,state_id: 5)
 
+blurb_sf1 = "This city! Wow I mean I wake up in the morning and it's crazy because it looks warm outside and then I walk to work (haha funny joke that I would live walking distance to work) but I do walk to Bart and it is freezing! I love it! I guess that's what I get for growing up in Arizona. But for real, this city is the best I have lived in. I only give it a 4 for weather because I prefer it a little more toasty. Oh and traffic sucks. But that's a given."
+blurb_sf2 = "I'm an east bay native but I still love the city. The best is that early morning drive over the Bay Bridge when the sun is just rising... BOOTIFUL. I don't get to eat out that much in the city but when I do, yumm! The mission has some amazing food, and amazing bars. The one thing about SF, and maybe this is just how I feels about the entire United States is that the bars close too d*** early. I'm not saying we need to be like Ibiza in the summertime... but I think 2am is a little on the early side. Got to have some love for the night owls in the city! Hoot Hoot"
+blurb_sf3 = "Longtime lurker here, I just wanted to say that I feel like sf is getting flooded with hipsters. I mean just look at the other blurbs! It feels like they have invented a new language that only the hippest of hipsters understand. I think we need to have more individuality, you know, be more unique. I drink out of regular glass cups to stand out, I think others should follow suit."
 10.times do 
 	Blurb.create!(city_id: 64, traffic: rand(1..5), weather: rand(1..5), food: rand(1..5), nightlife: rand(1..5), blurb: Faker::Hipster.paragraph)
 end
+
+Blurb.create!(city_id: 64, traffic: 2, weather: 4, food: 5, nightlife: 5, blurb: blurb_sf1)
+Blurb.create!(city_id: 64, traffic: 2, weather: 5, food: 5, nightlife: 4, blurb: blurb_sf2)
+Blurb.create!(city_id: 64, traffic: 3, weather: 5, food: 5, nightlife: 5, blurb: blurb_sf3)
+
+
+
+
+
 City.create!(name: 'San Jose' ,state_id: 5)
 
 10.times do 
