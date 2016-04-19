@@ -5,6 +5,7 @@ class Api::BlurbsController < ApplicationController
 		if @blurb.save 
 			@city = @blurb.city
 			@averages = @city.averages
+			@blubs = city
 			render :show
 		end
   

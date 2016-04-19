@@ -48,6 +48,7 @@ class City < ActiveRecord::Base
         return {traffic: traffic_avg.round(2), weather: weather_avg.round(2), food: food_avg.round(2), nightlife: nightlife_avg.round(2), overall: overall}
 
     end
+    
 
     
 	

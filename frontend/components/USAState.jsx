@@ -45,7 +45,7 @@ var USAState = React.createClass({
       	var that = this;
       	var topCities = this.state.cities.map(function(topCity, index){
       	var link = "/states/" + that.state.usaState.id + "/cities/" + topCity.id;
-      		return <li key={index} className="top-city"><Link className="top-city-link" to={link}>{topCity.name}</Link><span className="top-city-rating">{topCity.avgs.overall}</span></li>;
+      		return <li key={index} className="top-city"><Link className="top-city-link" to={link}>{topCity.name}</Link><span className="top-city-rating">{topCity.overall}</span></li>;
       	});
       }
       return topCities;

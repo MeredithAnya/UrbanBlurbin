@@ -2,16 +2,13 @@ class Api::StatesController < ApplicationController
 
 	def show
 		@state = State.find(params[:id])
-		if @state.top_cities.empty?
-			@top_city_one = false
-		else	
-			@top_city_one = City.find(@state.top_cities[0])
-			@averages_one = @top_city_one.averages
-			@top_city_two = City.find(@state.top_cities[1])
-			@averages_two = @top_city_two.averages
-			@top_city_three = City.find(@state.top_cities[2])
-			@averages_three = @top_city_three.averages
-		end
+		@top_cities = @state.top_cities	
+		@top_city_one = @top_cities[0][0]
+		@averages_one = @top_cities[0][1]
+		@top_city_two = @top_cities[1][0]
+		@averages_two = @top_cities[1][1]
+		@top_city_three = @top_cities[2][0]
+		@averages_three = @top_cities[2][1]
 		render :show
 	end
 
