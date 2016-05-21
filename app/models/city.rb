@@ -19,34 +19,60 @@ class City < ActiveRecord::Base
     	nil
     end
 
+    # def averages
+    #     return {} if self.blurbs.length == 0
+    #     total_blurbs = self.blurbs.count.to_f
+        
+    # 	traffics = self.blurbs.group(:traffic).count
+    #     traffic_sum = 0
+    # 	traffics.each {|key, value| traffic_sum += key * value}
+    #     traffic_avg = (traffic_sum/total_blurbs)
+
+    # 	weathers = self.blurbs.group(:weather).count
+    #     weather_sum = 0
+    #     weathers.each {|key, value| weather_sum += key * value}
+    # 	weather_avg = (weather_sum/total_blurbs)
+
+    # 	foods = self.blurbs.group(:food).count
+    #     food_sum = 0
+    #     foods.each {|key, value| food_sum += key * value}
+    # 	food_avg = (food_sum/total_blurbs)
+
+    # 	nightlifes = self.blurbs.group(:nightlife).count
+    #     nightlife_sum = 0
+    #     nightlifes.each {|key, value| nightlife_sum += key * value}
+    # 	nightlife_avg = (nightlife_sum/total_blurbs)
+
+    #     overall = ((traffic_avg + weather_avg + food_avg + nightlife_avg) / 4).round(2)
+        
+    #     return {traffic: traffic_avg.round(2), weather: weather_avg.round(2), food: food_avg.round(2), nightlife: nightlife_avg.round(2), overall: overall}
+
+    # end
+
     def averages
-        return {} if self.blurbs.length == 0
-        total_blurbs = self.blurbs.count.to_f
-        
-    	traffics = self.blurbs.group(:traffic).count
-        traffic_sum = 0
-    	traffics.each {|key, value| traffic_sum += key * value}
-        traffic_avg = (traffic_sum/total_blurbs)
+        blurbs = self.blurbs
+        total_blurbs = blurbs.count.to_f
 
-    	weathers = self.blurbs.group(:weather).count
-        weather_sum = 0
-        weathers.each {|key, value| weather_sum += key * value}
-    	weather_avg = (weather_sum/total_blurbs)
+        traffic = 0
+        weather = 0
+        nightlife = 0
+        food = 0
 
-    	foods = self.blurbs.group(:food).count
-        food_sum = 0
-        foods.each {|key, value| food_sum += key * value}
-    	food_avg = (food_sum/total_blurbs)
+        blurbs.each do |blurb|
+            traffic += blurb.traffic
+            weather += blurb.weather
+            nightlife += blurb.nightlife
+            food += blurb.food
+        end
 
-    	nightlifes = self.blurbs.group(:nightlife).count
-        nightlife_sum = 0
-        nightlifes.each {|key, value| nightlife_sum += key * value}
-    	nightlife_avg = (nightlife_sum/total_blurbs)
+        traffic_avg = traffic/total_blurbs
+        weather_avg = weather/total_blurbs
+        nightlife_avg = nightlife/total_blurbs
+        food_avg = food/total_blurbs
 
-        overall = ((traffic_avg + weather_avg + food_avg + nightlife_avg) / 4).round(2)
-        
-        return {traffic: traffic_avg.round(2), weather: weather_avg.round(2), food: food_avg.round(2), nightlife: nightlife_avg.round(2), overall: overall}
+        overall = ((traffic_avg + weather_avg + food_avg + nightlife_avg) / 4 ).round(2)
 
+        return {traffic: traffic_avg.round(2), weather: weather_avg.round(2), nightlife: nightlife_avg.round(2), food: food_avg.round(2), overall: overall }
     end
     
 
