@@ -3,7 +3,7 @@
                         								
 [Link][heroku] to live version
 
-[heroku]: www.urbanblurblin.com
+[heroku]: www.urbanblurbin.com
 
   
 [screenshot]: ./app/assets/images/UrbanBlurbinScreenshot.png
